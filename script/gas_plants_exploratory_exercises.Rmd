@@ -1,0 +1,47 @@
+---
+title: "GEM Gas Exploratory Analysis"
+output: 
+  pdf_document:
+    highlight: tango
+---
+
+```{r include=F}
+library(tidyverse)
+library(sf)
+library(tmap)
+```
+
+```{r include=F}
+gas_unit <- read_csv("../data/raw_data/gas_unit.csv")
+gas_unit <- 
+  gas_unit %>% mutate(Capacity = na_if(`Capacity elec. (MW)`, "not found") 
+                      %>% as.numeric()) %>% 
+  mutate(StartYear = na_if(`Start year`, "not found") 
+                      %>% as.numeric()) 
+```
+```{r include=F}
+
+China_gas <- gas_unit %>% filter(Country == "China")
+operating_gas <- China_gas %>% filter(Status == "operating")
+operating_gas %>% pull(Capacity) %>% sum(na.rm=T) 
+operating_gas %>% pull(StartYear) %>% range(na.rm=T)
+```
+
+## Descriptive Statistics
+
+**Total Number of plants:** There are a total of 680 gas units in GEM gas 
+plants tracker.
+
+**Time Coverage:** Start years of the plants ranges from 1991 to 2022
+
+**Operating Plants and total capacity: **
+Among these plants, 349 of them are operating, with a total installed capacity
+of 103480 MW. 
+This number is very close to the number published by CEC's published number 
+for 2021, which is 107040 MW. 
+
+CEC's number for 2021
+https://cec.org.cn/detail/index.html?3-304834
+
+
+
