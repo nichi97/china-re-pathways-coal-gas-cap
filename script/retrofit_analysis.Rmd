@@ -1,0 +1,48 @@
+---
+title: "retrofit_analysis"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r include=F}
+knitr::opts_chunk$set(echo=F, warning=F, message=F, info=F)
+```
+
+
+```{r}
+library(sf)
+library(tidyverse)
+library(tmap)
+```
+
+```{r}
+df_coal <- read_csv("../data/processed_data/china_coal.csv")
+sf_province <- st_read("../data/spatial_data/gadm40_CHN_1.shp")
+```
+
+```{r}
+df_coal <- 
+  df_coal %>% filter(!is.na(Year)) %>% 
+  mutate(age_at_2035 = 2035 - Year) %>% 
+  filter(age_at_2035 < 25) %>% 
+  filter(`Capacity (MW)` >= 600) %>% 
+  filter(Status == "operating")
+
+sf_coal <- 
+  df_coal %>% st_as_sf(coords = c("Longitude", "Latitude"), crs=4326) 
+```
+
+Selection Criteria: 
+1. Plants has at least 20 more years of life at 2030 
+2. Capacity is larger than 600 MW
+3. Operating plants
+
+```{r}
+tm_vi
+tm_shape(sf_province) + 
+  tm_borders() + 
+tm_shape(sf_coal) + 
+  tm_dots()
+```
+

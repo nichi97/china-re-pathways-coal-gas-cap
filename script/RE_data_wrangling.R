@@ -19,8 +19,13 @@ china_coal <-
   
 write_csv(china_coal, "./data/processed_data/china_coal.csv")
 
-
-
-
 china_gas <- gas %>% filter(Country == "China")
 write_csv(china_gas, "./data/processed_data/china_gas.csv")
+
+# --------------------------- power sector emission -----------------------
+power_emis <- read_csv("./data/raw_data/power_sector_emission_proj_2.csv")
+power_emis <- 
+  power_emis %>% mutate(Year = round(power_emis$Year))
+
+write_csv(power_emis, "./data/processed_data/power_sector_emission_2.csv")
+

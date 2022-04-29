@@ -1,0 +1,125 @@
+---
+title: "GEM China Coal Plants Retirement Visualization Exercise"
+author: Chi Gao
+date: April 14, 2022
+output:
+  prettydoc::html_pretty:
+    theme: leonids 
+---
+
+```{r include=F}
+knitr::opts_chunk$set(echo=F, warning=F, message=F)
+```
+
+```{r include=F}
+library(tidyverse)
+library(plotly)
+library(prettydoc)
+
+short_plot <- readRDS("../temp/short_plot.rds")
+mid_plot <- readRDS("../temp/mid_plot.rds")
+long_plot <- readRDS("../temp/long_plot.rds")
+retirement_over_time_plot <- readRDS("../temp/retirement_over_time_plot.rds")
+lifespan_plot <- readRDS("../temp/lifespan_plot.rds")
+```
+
+# Introduction 
+
+The main purpose of this visualization exercise is to illustrate China's coal plants 
+natural retirement patterns. That is, assuming China is not constructing any
+more new coal-fired power plants and all coal plants were to live up to its full planned 
+lifetime, what does China's coal-fired power generation capacity trajectory look like? 
+
+All the the plots here are made using GEM's [Coal Power Plants Tracker](https://globalenergymonitor.org/projects/global-coal-plant-tracker/download-data/).
+
+# Historical Retirement patterns
+
+To estimate the trajectory of coal generation capacity, it is imperative to inspect 
+the historical 
+retirement records. To this end, I first select only the retired plants and plot out the 
+relationship between plant operation start time and plant lifetime. 
+
+```{r}
+lifespan_plot <- 
+lifespan_plot + geom_hline(yintercept = 22, linetype="dashed", color="red") + 
+  geom_text(x=1960, y=20, label="Average Lifetime: 22", color="red") 
+
+lifespan_plot %>% ggplotly()
+```
+
+Curiously, there is a significant linear relationship between operation start year and 
+the lifespan of coal-fired power plants. This strong association can be attributed to China's 
+slew of campaigns targeting at small coal plants to address overcapacity problems. One 
+regulatory document issued in 2005 that heralds these retirement and restructuring 
+campaigns is the 
+[Decision of the State Council on Promulgating the “Interim Provisions on Promoting Industrial Structure Adjustment” for Implementation](http://www.lawinfochina.com/display.aspx?lib=law&id=4828), which highlighted China's pressing needs to "build large-type coal bases, adjust
+and transform medium and small coal mines, firmly eliminate the small coal mines
+failing to meet work safety conditions and wasting or destroying resources."
+To see how these policies are affecting the retirement of coal-fired power plants, I plotted
+the histogram of coal plant retirement over time: 
+
+```{r}
+retirement_over_time_plot <- 
+  retirement_over_time_plot + theme(text=element_text(size=11)) + 
+  scale_x_continuous(breaks=seq(1990, 2020, 5)) + 
+  labs(y = "Count", x = "Retirement start year")
+
+retirement_over_time_plot %>% ggplotly()
+```
+
+Indeed, starting from 2005, there is a sudden increase in the amount of retired 
+coal plants; many smaller plants were shut down before their planned retirement are due. 
+
+# Natural coal plants phaseout trajectory
+
+This section aims to summarize the coal generation capacity trajectory under the natural 
+phaseout assumption. That is, no new coal plants will be constructed unless the plant is 
+currently under construction or already acquired permits. These sets of graphs are made 
+to gauge how much early retirement and retrofitting efforts are required to achieve 
+carbon neutrality under different planned lifetime schemes. 
+
+```{r}
+short_plot <- 
+  short_plot + theme(text=element_text(size=11)) + 
+  scale_x_continuous(breaks=seq(2000, 2080, 10), limits = c(2000, 2080)) + 
+  labs(x = "Year")
+ggplotly(short_plot)
+```
+
+```{r}
+mid_plot <- 
+  mid_plot + theme(text=element_text(size=11)) +
+  scale_x_continuous(breaks=seq(2000, 2080, 10), limits = c(2000, 2080)) + 
+  labs(x = "Year")
+
+ggplotly(mid_plot)
+```
+
+```{r}
+long_plot <- 
+  long_plot + theme(text=element_text(size=11)) + 
+  scale_x_continuous(breaks=seq(2000, 2080, 10), limits = c(2000, 2080)) + 
+  labs(x = "Year")
+
+ggplotly(long_plot)
+```
+
+As we can see, in the more realistic lifetime scenarios of 30 years and 40 years, natural 
+phaseout is not satisfactory per se. In my future work, I will identify retrofitting and 
+retirement capacity of each province. 
+
+Note: In part to address some missing data, some assumptions are made to produce these three plots above.
+
+1. All plants under construction will complete construction, assuming it will 
+take five years. 
+1. Planned lifetime is only applied to plants without known planned retirement date. 
+1. For coal plants that are permitted yet haven't started their construction, a 5-10 years 
+pre-construction period is assigned randomly before entering the construction phase. 
+1. Given the strong linear relationship explored in previous section, lifetime of those plants
+whose retirement year is unknown is predicted using their operation start year. 
+1. Cancelled, shelved, pre-permit, mothballed, and announced projects, as well as 
+operating plants with no starting  and retirement years are all not considered in the 
+visualization exercises. 
+
+
+

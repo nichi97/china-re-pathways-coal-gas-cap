@@ -1,7 +1,7 @@
 library(tidyverse)
-
+library(ggpubr)
+library(plotly)
 coal <- read_csv("./data/processed_data/china_coal.csv")
-gas <- read_csv("./data/processed_data/china_gas.csv")
 
 # ----------------- Exploratory analysis --------------------------------------------
 
@@ -16,12 +16,14 @@ df_coal_retire_trend <-
 avg_lifetime <- mean(df_coal_retire_trend$lifeSpan, na.rm=T) %>% floor()
 
 # In retired plants, lifespan vs starting year
-ggplot(df_coal_retire_trend, aes(y = lifeSpan, x = Year)) + 
+lifespan_plot <- ggplot(df_coal_retire_trend, aes(y = lifeSpan, x = Year)) + 
   geom_point(position = "jitter") + 
   geom_smooth() + 
   labs(title = "Lifespan of Chinese Coal Plants over Time", 
        x = "Operation start year", 
        y = "Lifespan")
+
+ggsave("./figures/lifespan_plot.png", lifespan_plot, unit="cm", width = 20)
 
 # linear model between lifespan and year
 retire_model <- lm(lifeSpan ~ Year, df_coal_retire_trend)
@@ -37,10 +39,12 @@ ggplot(df_coal_retire_trend, aes(y = lifeSpan, x = RETIRED)) +
 # Maybe this is because all the plants are retiring at the same time?
 # Well... not exactly.
 # there has been a sharp increase in retirement since 2005. 
-df_coal_retire_trend %>% 
-ggplot(aes(x = RETIRED)) + 
-  geom_histogram(bins=15) + 
-  labs(title = "")
+retirement_over_time_plot <- 
+  df_coal_retire_trend %>% 
+  ggplot(aes(x = RETIRED)) + 
+    geom_histogram(bins=15) + 
+    labs(title = "Number of retired plants over time")
+ggsave("./figures/retirement_over_time.png")
 
 # Now, let's look at operating plants: what is the relationship between the 
 # starting year and planned retirement year?
@@ -74,7 +78,7 @@ calc_coal_cum_cap <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
   
   #' @param PLANNED_LIFETIME: default lifetime of a coal fired power plant
   #' @param CONSTRUCTION_TIME: default time spends on constructing a coal fired power plant
-  #' @return 
+  #' @return a data frame that store year and cumulative capacity 
   
   df_coal_retire_trend <- 
     coal %>% filter(Status == "retired")
@@ -199,21 +203,79 @@ calc_coal_cum_cap <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
       trouble_maker <- append(trouble_maker, i)
     }
   }
-  return(year_ls)
+  cum_cap_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
+    mutate(year = (min(coal_vintage$Year, na.rm=T)):2080) %>% 
+    rename(cumCap = value) 
+  
+  return(cum_cap_df)
+  
 }
 
-year_ls <- calc_coal_cum_cap(30, 5)
-# construct a data frame of cumulative capacity
-change_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
-  mutate(year = (min(coal_vintage$Year, na.rm=T)):2080) %>% 
-  rename(cumCap = value)
+shorter_lifetime_df <- calc_coal_cum_cap(20, 5)
+# MW -> GW
+shorter_lifetime_df <- 
+  shorter_lifetime_df %>% mutate(cumCap = cumCap / 1000)
 
-ggplot(change_df, aes(y = cumCap / 1000, x = year)) + 
-  geom_point() + 
+short_plot <- ggplot(shorter_lifetime_df, aes(y = cumCap, x = year)) + 
   geom_line() + 
+  geom_area() + 
   xlim(2000, 2080) + 
-  labs(y = "Coal Plants Cumulative Capacity (GW)") + 
-  scale_y_continuous(breaks=seq(0,1200, 200))
+  labs(y = "Cumulative Capacity (GW)", 
+       title = "Cumulative Coal Capacity, 20 years planned lifetime") + 
+  scale_y_continuous(breaks=seq(0,1200, 200))  + 
+  theme(text=element_text(size=20))
+
+# construct a data frame of cumulative capacity
+change_df <- calc_coal_cum_cap(30, 5)
+# convert cumCap to GW
+change_df <- 
+  change_df %>% mutate(cumCap = cumCap / 1000)
+mid_plot <- ggplot(change_df, aes(y = cumCap, x = year)) + 
+  geom_line() + 
+  geom_area() + 
+  xlim(2000, 2080) + 
+  labs(y = "Cumulative Capacity (GW)", 
+       title = "Cumulative Coal Capacity, 30 years planned lifetime") + 
+  scale_y_continuous(breaks=seq(0,1200, 200))  + 
+  theme(text=element_text(size=20))
+  
+longer_lifetime_df <- calc_coal_cum_cap(40, 5)
+longer_lifetime_df <- 
+  longer_lifetime_df %>% mutate(cumCap = cumCap / 1000)
+long_plot <- ggplot(longer_lifetime_df, aes(y = cumCap, x = year)) + 
+  geom_line() + 
+  geom_area() + 
+  xlim(2000, 2080) + 
+  labs(y = "Cumulative Capacity (GW)", 
+       title = "Cumulative Coal Capacity, 40 years planned lifetime") + 
+  scale_y_continuous(breaks=seq(0,1200, 200)) + 
+  theme(text=element_text(size=20))
 
 
+coal_vintage_plot <- ggarrange(short_plot, mid_plot, long_plot, 
+          ncol=1, nrow=3)
+
+coal_vintage_plot
+ggsave("./figures/coal_vintage_plot.png", coal_vintage_plot, dpi = 400, 
+       units = "cm", height = 30, width = 40)
+
+coal_retirement_plots <- ggarrange(lifespan_plot, 
+                                   retirement_over_time_plot,
+                                   labels=c("A", "B"))
+
+coal_retirement_plots
+ggsave("./figures/coal_retirementplots.png", coal_retirement_plots, dpi = 400, 
+       units = "cm", height = 15, width = 30)
+
+# save intermediate variables for ggplotly
+saveRDS(short_plot, file="./temp/short_plot.rds")
+saveRDS(mid_plot, file="./temp/mid_plot.rds")
+saveRDS(long_plot, file="./temp/long_plot.rds")
+saveRDS(lifespan_plot, file="./temp/lifespan_plot.rds")
+saveRDS(retirement_over_time_plot, file="./temp/retirement_over_time_plot.rds")
+          
+          
+          
+          
+          
 
