@@ -305,14 +305,21 @@ function(coal, PLANNED_LIFETIME, CONSTRUCTION_TIME,
   retrofit_candidate <- 
     coal_vintage %>% filter(!is.na(Year)) %>% 
     mutate(age_at_2030 = 2030 - Year) %>% 
-    filter(age_at_2030 < 20) %>% 
-    filter(`Capacity (MW)` >= 600) %>% 
+    filter(age_at_2030 < 25) %>% 
+    filter(`Capacity (MW)` >= 400) %>% 
     filter(Status == "operating")
   
   for(loop_year in c(2030, 2040, 2050)){
     
+    # unretrofitted total emission
+    cum_emis_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
+      mutate(year = (min(coal_vintage$Year, na.rm=T)):2080) %>% 
+      rename(cum_emis = value) 
+  
+    # calculate the gap between proj and actual 
     emis_gap <- 
-      emis_proj %>% filter(Year == loop_year) %>% pull(CO2_emission)
+      (cum_emis_df %>% filter(year == loop_year) %>% pull(cum_emis)) - 
+      (emis_proj %>% filter(Year == loop_year) %>% pull(CO2_emission)) 
     
     # calculate the remaining lifetime as of year loop_year
     retrofit_candidate <- 
@@ -354,15 +361,16 @@ function(coal, PLANNED_LIFETIME, CONSTRUCTION_TIME,
     }
     
   }
-  cum_emis_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
+  # calculate the total emission after retrofitting 
+  post_cum_emis_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
     mutate(year = (min(coal_vintage$Year, na.rm=T)):2080) %>% 
     rename(cum_emis = value) 
   
-  return(cum_emis_df)
+  return(post_cum_emis_df)
   
 }
 
-retrofitted_rst <- calc_coal_cum_emis_retrofitted(40, 5)
+retrofitted_rst <- calc_coal_cum_emis_retrofitted(coal, 40, 5)
 
 longer_lifetime_df <- calc_coal_cum_emis(40, 5)
 
@@ -396,5 +404,19 @@ ggplot(emis_proj, aes(x = Year, y = CO2_emission)) +
 ggsave("./figures/coal_phaseout_vs_proj_emis.png", units="cm", width=20)
 
 
+ggplot(emis_proj, aes(x = Year, y = CO2_emission)) + 
+  geom_area(data=retrofitted_rst, aes(y = cum_emis, x = year)) + 
+  geom_point(col="red") + 
+  geom_line(col="red") + 
+  xlim(2020, 2060) + 
+  scale_y_continuous(breaks = seq(from = -1000, to = 5000, by = 1000),
+                     limits = c(-1000, 5000)) +
+  labs(y = "CO2 emission (million ton)", 
+       caption = "The red line is the projected CO2 emission for the entire electricity sector under the 2C scenario developed by 
+       ICCSD (清华大学气候变化与可持续发展研究院). The shaded area is the emission from coal-fired
+       power plants under natural phaseout. 40 years of lifetime is assumed.") + 
+  ggtitle("Coal natural phaseout CO2 emission vs 2C scenario CO2 emission") + 
+  theme(plot.caption = element_text(hjust=0))
+ 
 
 
