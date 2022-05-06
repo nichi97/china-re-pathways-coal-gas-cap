@@ -66,8 +66,16 @@ gas <-
                  "2012", 
                  `Start year`)) %>% 
   mutate(`Capacity elec. (MW)` = as.numeric(`Capacity elec. (MW)`), 
-         `Start year` = as.numeric(`Start year`))
-  
+         `Start year` = as.numeric(`Start year`)) %>% 
+  filter(!is.na(`Start year`))
+
+# Calculate an estimate for gas CO2 emission, using a capacity factor of 
+# 0.3 as calculated per https://cec.org.cn/detail/index.html?3-307614
+# and a emission factor of 0.5 tCO2/tce -> 0.2 tCO2/MWh
+gas <- 
+  gas %>% mutate(`Annual CO2 (million tonnes / annum)` = 
+                   `Capacity elec. (MW)` * 365 * 24 * 0.3 * 0.5 / 1e6)
+
 gas_merge <- 
   gas %>% 
   rename(Plant = `Plant name`, 
@@ -78,8 +86,11 @@ gas_merge <-
          `Planned Retire` = `Planned retire`, 
          `Tracker ID` = `GEM unit ID`) %>% 
   select(Plant, `Chinese Name`, `Capacity (MW)`, `Status`, Year, `RETIRED`,
-         `Planned Retire`, Latitude, Longitude, `GEM unit ID`) %>% 
+         `Planned Retire`, Latitude, Longitude, `Tracker ID`, 
+         `Annual CO2 (million tonnes / annum)`) %>% 
   mutate(resource = "gas")
+
+
 
 # clean gas
   
@@ -88,3 +99,8 @@ coal_merge <-
   mutate(resource = "coal")
 
 coal_gas_merge <- bind_rows(coal_merge, gas_merge)
+coal_gas_merge <- 
+  coal_gas_merge %>% filter(!is.na(Year))
+
+write_csv(coal_gas_merge, "./data/processed_data/coal_gas_merge_final.csv")
+  
