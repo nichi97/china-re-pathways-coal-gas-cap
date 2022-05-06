@@ -25,7 +25,66 @@ write_csv(china_gas, "./data/processed_data/china_gas.csv")
 # --------------------------- power sector emission -----------------------
 power_emis <- read_csv("./data/raw_data/power_sector_emission_proj_2.csv")
 power_emis <- 
-  power_emis %>% mutate(Year = round(power_emis$Year))
+  power_emis %>% mutate(Year = round(power_emis$Year)) %>% 
+  add_row(Year = 2060, CO2_emission = -5.5)
+
+power_emis <- 
+  power_emis %>% 
+  add_row(Year = 2055, 
+          CO2_emission = (power_emis[[7, "CO2_emission"]] + 
+                            power_emis[[8, "CO2_emission"]]) / 2) %>% 
+  mutate(CO2_emission = CO2_emission * 100) %>% 
+  arrange(Year)
 
 write_csv(power_emis, "./data/processed_data/power_sector_emission_2.csv")
 
+# ------------------------- Negative emission data --------------------------
+
+#' According to the paper, the negative emission at 2060 is 550 missiln ton 
+#' for the entire electricity sector. We are assuming that BECCS starts to be 
+#' built starting 2040, and the growth rate is linear from 2040 to 2060. 
+#' Given these assumptions, we can derive the negative emission from BECCS
+#' from 2040 to 2060.
+
+negative_emission <- 
+  tibble(years = seq(2030, 2060, 10),
+         CO2_emission = seq(from=0, to=-550, length.out=4))
+
+write_csv(negative_emission, "./data/processed_data/negative_emission.csv")
+
+
+# ----------------------------- merge coal and gas ---------------------------
+
+gas <- read_csv("./data/processed_data/china_gas.csv")
+coal <- read_csv("./data/processed_data/china_coal.csv")
+
+# clean the capacity column
+gas <- 
+  gas %>% 
+  na_if("not found") %>% 
+  mutate(`Start year` = if_else(`Start year` == "2012-2013", 
+                 "2012", 
+                 `Start year`)) %>% 
+  mutate(`Capacity elec. (MW)` = as.numeric(`Capacity elec. (MW)`), 
+         `Start year` = as.numeric(`Start year`))
+  
+gas_merge <- 
+  gas %>% 
+  rename(Plant = `Plant name`, 
+         `Chinese Name` = `Plant name (local script)`,
+         `Capacity (MW)` = `Capacity elec. (MW)`,
+         Year = `Start year`, 
+         `RETIRED` = `Retired year`, 
+         `Planned Retire` = `Planned retire`, 
+         `Tracker ID` = `GEM unit ID`) %>% 
+  select(Plant, `Chinese Name`, `Capacity (MW)`, `Status`, Year, `RETIRED`,
+         `Planned Retire`, Latitude, Longitude, `GEM unit ID`) %>% 
+  mutate(resource = "gas")
+
+# clean gas
+  
+coal_merge <- 
+  coal %>% 
+  mutate(resource = "coal")
+
+coal_gas_merge <- bind_rows(coal_merge, gas_merge)

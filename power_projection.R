@@ -17,7 +17,7 @@ master_df <-
   master_df %>% mutate(BECCS = BECCS_cap)
 
 # Coal CHP CCS
-CHP_cap <- rep(246, 5)
+CHP_cap <- seq(from=498, to=246, length.out=5)
 
 # assuming to be the same 
 master_df <- 
@@ -27,6 +27,10 @@ master_df <-
 
 master_df <- 
   master_df %>% mutate(Hydro = c(0, 441, 505.5, 570, 580))
+
+master_df
+
+write_csv(master_df, "./data/processed_data/capacity_trajectory.csv")
 
 
 

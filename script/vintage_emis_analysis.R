@@ -1,7 +1,7 @@
 library(tidyverse)
 
 coal <- read_csv("./data/processed_data/china_coal.csv")
-
+emis_proj <- read_csv("./data/processed_data/power_sector_emission_2.csv")
 calc_coal_cum_emis <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
   
   #' @param PLANNED_LIFETIME: default lifetime of a coal fired power plant
@@ -151,11 +151,13 @@ calc_coal_cum_emis <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
 
 
 calc_coal_cum_emis_retrofitted <- 
-function(coal, PLANNED_LIFETIME, CONSTRUCTION_TIME, 
+function(coal, emis_proj, retrofit_years, PLANNED_LIFETIME, CONSTRUCTION_TIME, 
          capture_rate = 0.92){
   
+  #' @param coal: The coal plant dataset 
+  #' @param emis_proj: The emission projection, including both year and emission
+  #' @param retrofit_years: the years at which the retrofit decisions are made.
   #' @param PLANNED_LIFETIME: default lifetime of a coal fired power plant
-  #' @param coal: The coal dataset 
   #' @param CONSTRUCTION_TIME: default time spends on constructing a coal fired power plant
   #' @return a data frame that contains year and cumulative emission 
   
@@ -309,7 +311,7 @@ function(coal, PLANNED_LIFETIME, CONSTRUCTION_TIME,
     filter(`Capacity (MW)` >= 400) %>% 
     filter(Status == "operating")
   
-  for(loop_year in c(2030, 2040, 2050)){
+  for(loop_year in retrofit_years){
     
     # unretrofitted total emission
     cum_emis_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
@@ -370,22 +372,16 @@ function(coal, PLANNED_LIFETIME, CONSTRUCTION_TIME,
   
 }
 
-retrofitted_rst <- calc_coal_cum_emis_retrofitted(coal, 40, 5)
+emis_proj <- read_csv("./data/processed_data/power_sector_emission_2.csv")
+
+retrofitted_rst <- calc_coal_cum_emis_retrofitted(coal, emis_proj,
+                                                  seq(2025, 2060, 5),
+                                                  40, 5)
 
 longer_lifetime_df <- calc_coal_cum_emis(40, 5)
 
 # ------------------ Compare coal emis with emis proj --------
 
-emis_proj <- read_csv("./data/processed_data/power_sector_emission_2.csv")
-
-# convert from 亿吨 to million ton 
-emis_proj <- 
-  emis_proj %>% mutate(CO2_emission = CO2_emission * 100)
-
-# -550 is from the original paper, perceiving the electricity
-# sector as a carbon sink for the other sectors
-emis_proj <- 
-  emis_proj %>% add_row(Year = 2060, CO2_emission = -550)
 
 ggplot(emis_proj, aes(x = Year, y = CO2_emission)) + 
   geom_area(data=longer_lifetime_df, aes(y = cum_emis, x = year)) + 
@@ -418,5 +414,9 @@ ggplot(emis_proj, aes(x = Year, y = CO2_emission)) +
   ggtitle("Coal natural phaseout CO2 emission vs 2C scenario CO2 emission") + 
   theme(plot.caption = element_text(hjust=0))
  
+ggsave("./figures/coal_phaseout_retrofit.png", units="cm", width=20)
+
+
+
 
 
