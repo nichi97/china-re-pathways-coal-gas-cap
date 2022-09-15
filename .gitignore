@@ -1,4 +1,13 @@
+# R profile files
 .Rproj.user
 .Rhistory
-.RData
 .Ruserdata
+.Rproj
+
+# For rmd generate html files 
+*.html
+
+# For RHub hosting files 
+rsconnect/
+
+
