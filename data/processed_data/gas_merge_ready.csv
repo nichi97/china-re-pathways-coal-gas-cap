@@ -1,0 +1,430 @@
+Plant,Chinese Name,Capacity (MW),Status,Year,RETIRED,Planned Retire,Latitude,Longitude,Tracker ID,Annual CO2 (million tonnes / annum),"Subnational unit (province, state)",resource
+Baode Coalbed Methane power station,保徳煤层气发电站,144,operating,2019,NA,NA,38.972742,110.979596,G405822,0.189216,Shanxi,gas
+Beijing Energy Caoqiao Gas Thermal power station,北京市草桥燃气热电厂,838,operating,2013,NA,NA,39.83456,116.356664,G405164,1.101132,Beijing,gas
+Beijing Energy Future City Gas and Thermal power station,京能未来城燃气热电厂,255,operating,2014,NA,NA,40.101992,116.468024,G405166,0.33507,Beijing,gas
+Beijing Energy Gao'antun Gas Thermal power station,京能高安屯燃气热电厂,845,operating,2014,NA,NA,39.947119,116.614327,G405165,1.11033,Beijing,gas
+Beijing Energy Jingfeng Gas Thermal power station,京能京丰燃气发电厂,410,operating,2006,NA,NA,39.812616,116.143368,G405160,0.53874,Beijing,gas
+Beijing Energy Jingxi Gas Thermal power station,京能京西燃气热电厂,873,operating,2014,NA,NA,39.942898,116.126776,G405161,1.147122,Beijing,gas
+Beijing Energy Jingxi Gas Thermal power station,京能京西燃气热电厂,434,operating,2014,NA,NA,39.942898,116.126776,G405162,0.570276,Beijing,gas
+Beijing Energy Shangzhuang Gas Thermal power station,京能上庄燃气热电厂,266,operating,2018,NA,NA,40.087064,116.194772,G405159,0.349524,Beijing,gas
+Beijing Energy Sun Palace Gas Thermal power station,京能太阳宫燃气热电厂,390,operating,2008,NA,NA,39.978557,116.438761,G405163,0.51246,Beijing,gas
+Beijing Energy Sun Palace Gas Thermal power station,京能太阳宫燃气热电厂,390,operating,2008,NA,NA,39.978557,116.438761,G409888,0.51246,Beijing,gas
+Beijing Energy Zhuhai Yuhai Gas Thermal power station,京能珠海钰海燃气热电厂,465,operating,2020,NA,NA,22.093095,113.155431,G405228,0.61101,Guangdong,gas
+Beijing Energy Zhuhai Yuhai Gas Thermal power station,京能珠海钰海燃气热电厂,465,operating,2020,NA,NA,22.093095,113.155431,G405229,0.61101,Guangdong,gas
+Beijing Zhengdong Electronic Power Group South power station,北京正东电子动力集团动力南厂,122,operating,2009,NA,NA,39.97191,116.494381,G405167,0.160308,Beijing,gas
+CNOOC Funing Thermal power station,中海油阜宁燃机热电厂,100,operating,2022,NA,NA,33.7704307,119.8411057,G405489,0.1314,Jiangsu,gas
+CNOOC Hainan Yangpu Gas power station,中海油海南洋浦电厂,220,operating,1993,NA,NA,19.724684,109.179912,G405409,0.28908,Hainan,gas
+CNOOC Hainan Yangpu Gas power station,中海油海南洋浦电厂,220,operating,1993,NA,NA,19.724684,109.179912,G405410,0.28908,Hainan,gas
+CNOOC Putian Gas power station,中海福建燃气发电公司莆田燃气电厂,390,operating,2010,NA,NA,25.219753,119.002784,G405184,0.51246,Fujian,gas
+CNOOC Putian Gas power station,中海福建燃气发电公司莆田燃气电厂,390,operating,2010,NA,NA,25.219753,119.002784,G405185,0.51246,Fujian,gas
+CNOOC Putian Gas power station,中海福建燃气发电公司莆田燃气电厂,390,operating,2010,NA,NA,25.219753,119.002784,G405186,0.51246,Fujian,gas
+CNOOC Putian Gas power station,中海福建燃气发电公司莆田燃气电厂,390,operating,2010,NA,NA,25.219753,119.002784,G405187,0.51246,Fujian,gas
+CNOOC Shenzhen power plant,中海油深圳电厂,235,operating,2003,NA,NA,22.557412,114.491833,G405214,0.30879,Guangdong,gas
+CNOOC Shenzhen power plant,中海油深圳电厂,360,operating,2005,NA,NA,22.557412,114.491833,G405215,0.47304,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,125,operating,1997,NA,NA,22.569977,113.572525,G405207,0.16425,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,125,operating,1998,NA,NA,22.569977,113.572525,G405208,0.16425,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,390,operating,2009,NA,NA,22.569977,113.572525,G405209,0.51246,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,390,operating,2009,NA,NA,22.569977,113.572525,G405210,0.51246,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,460,operating,2014,NA,NA,22.569977,113.572525,G405211,0.60444,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,460,operating,2014,NA,NA,22.569977,113.572525,G405212,0.60444,Guangdong,gas
+CNOOC Zhongshan Jiaming Gas power station,中海油中山嘉明电厂,460,operating,2014,NA,NA,22.569977,113.572525,G405213,0.60444,Guangdong,gas
+CNOOC Zhuhai Gas power station,中海油珠海天然气发电有限公司,460,operating,2014,NA,NA,21.92294,113.220772,G405216,0.60444,Guangdong,gas
+CNOOC Zhuhai Gas power station,中海油珠海天然气发电有限公司,460,operating,2014,NA,NA,21.92294,113.220772,G405217,0.60444,Guangdong,gas
+CR GCL Beijing Gas Thermal power station,华润协鑫(北京)燃气热电厂,75,operating,2006,NA,NA,39.781342,116.502287,G405168,0.09855,Beijing,gas
+CR GCL Beijing Gas Thermal power station,华润协鑫(北京)燃气热电厂,75,operating,2006,NA,NA,39.781342,116.502287,G405169,0.09855,Beijing,gas
+Chaozhou Shenzhen Energy Fengquan Lake High-tech Zone Gas-fired Thermal power plant,潮州深能凤泉湖高新区燃气热电厂,100,construction,2022,NA,NA,23.646523,116.792772,G405348,0.1314,Guangdong,gas
+Chaozhou Shenzhen Energy Fengquan Lake High-tech Zone Gas-fired Thermal power plant,潮州深能凤泉湖高新区燃气热电厂,100,construction,2022,NA,NA,23.646523,116.792772,G405349,0.1314,Guangdong,gas
+China Resources Changzhou Zhonglou Distributed Energy Station,华润常州钟楼分布式能源站,54,operating,2019,NA,NA,31.800297,119.86221,G405757,0.070956,Jiangsu,gas
+China Resources Changzhou Zhonglou Distributed Energy Station,华润常州钟楼分布式能源站,54,operating,2019,NA,NA,31.800297,119.86221,G405758,0.070956,Jiangsu,gas
+China Resources Nansha Hengli Gas Thermal power station,华润南沙横沥燃气热电厂,60,proposed,2024,NA,NA,22.681608,113.52446,G405240,0.07884,Guangdong,gas
+China Resources Nansha Hengli Gas Thermal power station,华润南沙横沥燃气热电厂,60,proposed,2024,NA,NA,22.681608,113.52446,G405241,0.07884,Guangdong,gas
+China Resources Zhuhai Distributed Gas power station,珠海华润热电富山燃气发电厂,60,construction,2024,NA,NA,22.149907,113.14181,G405248,0.07884,Guangdong,gas
+China Resources Zhuhai Distributed Gas power station,珠海华润热电富山燃气发电厂,60,construction,2024,NA,NA,22.149907,113.14181,G405249,0.07884,Guangdong,gas
+Danyang Huahai Gas Thermal power station,丹阳华海燃机热电厂,100,construction,2021,NA,NA,32.048051,119.617207,G405497,0.1314,Jiangsu,gas
+Danyang Huahai Gas Thermal power station,丹阳华海燃机热电厂,100,construction,2021,NA,NA,32.048051,119.617207,G405498,0.1314,Jiangsu,gas
+Datang Baochang Gas power station,大唐宝昌燃气发电站,180,operating,2003,NA,NA,22.707372,114.027049,G405285,0.23652,Guangdong,gas
+Datang Baochang Gas power station,大唐宝昌燃气发电站,180,operating,2004,NA,NA,22.707372,114.027049,G405286,0.23652,Guangdong,gas
+Datang Baochang Gas power station,大唐宝昌燃气发电站,465,construction,2022,NA,NA,22.707372,114.027049,G405287,0.61101,Guangdong,gas
+Datang Baochang Gas power station,大唐宝昌燃气发电站,465,construction,2022,NA,NA,22.707372,114.027049,G405288,0.61101,Guangdong,gas
+Datang Beijing Gaojing Thermal power station,大唐国际北京高井热电厂,350,operating,2014,NA,NA,39.942703,116.127166,G405177,0.4599,Beijing,gas
+Datang Beijing Gaojing Thermal power station,大唐国际北京高井热电厂,350,operating,2014,NA,NA,39.942703,116.127166,G405178,0.4599,Beijing,gas
+Datang Foshan Gas power station,大唐佛山燃气发电站,400,construction,2022,NA,NA,22.907718,112.813399,G405791,0.5256,Guangdong,gas
+Datang Foshan Gas power station,大唐佛山燃气发电站,400,construction,2022,NA,NA,22.907718,112.813399,G405792,0.5256,Guangdong,gas
+Datang Gaoyao Jintao Gas Thermal power station,大唐高要金淘燃气热电站,400,operating,2018,NA,NA,23.13353,112.778383,G405283,0.5256,Guangdong,gas
+Datang Gaoyao Jintao Gas Thermal power station,大唐高要金淘燃气热电站,400,operating,2018,NA,NA,23.13353,112.778383,G405284,0.5256,Guangdong,gas
+Datang Haikou Gas power station,大唐海口天然气发电厂,487,construction,2022,NA,NA,19.913828,110.151883,G405426,0.639918,Hainan,gas
+Datang Haikou Gas power station,大唐海口天然气发电厂,487,construction,2022,NA,NA,19.913828,110.151883,G405427,0.639918,Hainan,gas
+Datang Jiangshan Xincheng Thermal power station,大唐国际江山新城燃机热电厂,120,operating,2013,NA,NA,28.629348,118.529704,G405727,0.15768,Zhejiang,gas
+Datang Jiangshan Xincheng Thermal power station,大唐国际江山新城燃机热电厂,120,operating,2013,NA,NA,28.629348,118.529704,G405728,0.15768,Zhejiang,gas
+Datang Jiangyan Gas Thermal power station,大唐姜堰燃机热电厂,180,operating,2017,NA,NA,32.481428,120.097338,G405582,0.23652,Jiangsu,gas
+Datang Jiangyan Gas Thermal power station,大唐姜堰燃机热电厂,180,operating,2017,NA,NA,32.481428,120.097338,G405583,0.23652,Jiangsu,gas
+Datang Jintan Gas Thermal power station,大唐国际金坛燃机热电厂,459,operating,2019,NA,NA,31.773087,119.608947,G405584,0.603126,Jiangsu,gas
+Datang Jintan Gas Thermal power station,大唐国际金坛燃机热电厂,459,operating,2019,NA,NA,31.773087,119.608947,G405585,0.603126,Jiangsu,gas
+Datang Lishui Gas Thermal power station,大唐溧水燃机热电厂,100,operating,2021,NA,NA,31.680566,118.999543,G405588,0.1314,Jiangsu,gas
+Datang Lishui Gas Thermal power station,大唐溧水燃机热电厂,100,operating,2021,NA,NA,31.680566,118.999543,G405589,0.1314,Jiangsu,gas
+Datang Shaoxing Jiangbin Thermal power station,大唐国际绍兴江滨热电厂,452,operating,2013,NA,NA,30.13162,120.692748,G405733,0.593928,Zhejiang,gas
+Datang Shaoxing Jiangbin Thermal power station,大唐国际绍兴江滨热电厂,452,operating,2013,NA,NA,30.13162,120.692748,G405734,0.593928,Zhejiang,gas
+Datang Suzhou Gas Thermal power station,大唐苏州燃机热电厂,200,operating,2013,NA,NA,31.037376,120.759901,G405580,0.2628,Jiangsu,gas
+Datang Suzhou Gas Thermal power station,大唐苏州燃机热电厂,200,operating,2013,NA,NA,31.037376,120.759901,G405581,0.2628,Jiangsu,gas
+Datang Wanning Gas power station,大唐万宁燃气电厂,460,operating,2021,NA,NA,18.913193,110.370316,G405424,0.60444,Hainan,gas
+Datang Wanning Gas power station,大唐万宁燃气电厂,460,construction,2021,NA,NA,18.913193,110.370316,G405425,0.60444,Hainan,gas
+Dongguan Humen Gas power station,东莞虎门电厂,180,operating,2005,NA,NA,22.815288,113.624786,G405199,0.23652,Guangdong,gas
+Dongguan Humen Gas power station,东莞虎门电厂,60,operating,2005,NA,NA,22.815288,113.624786,G405200,0.07884,Guangdong,gas
+Dongguan Humen Gas power station,东莞虎门电厂,60,operating,2005,NA,NA,22.815288,113.624786,G405201,0.07884,Guangdong,gas
+Dongguan Ningzhou Gas power station,东莞宁洲燃气电厂,700,construction,2023,NA,NA,23.024253,113.596723,G405305,0.9198,Guangdong,gas
+Dongguan Ningzhou Gas power station,东莞宁洲燃气电厂,700,construction,2023,NA,NA,23.024253,113.596723,G405306,0.9198,Guangdong,gas
+Dongguan Ningzhou Gas power station,东莞宁洲燃气电厂,700,construction,2023,NA,NA,23.024253,113.596723,G405307,0.9198,Guangdong,gas
+Dongguan Qishi Natural Gas Distributed power station,东莞企石天然气分布式能源项目,120,proposed,2024,NA,NA,23.048314,114.032086,G405774,0.15768,Guangdong,gas
+Dongguan Qishi Natural Gas Distributed power station,东莞企石天然气分布式能源项目,120,proposed,2024,NA,NA,23.048314,114.032086,G405775,0.15768,Guangdong,gas
+Dongguan Qishi Natural Gas power station,东莞企石天然气分布式热电厂,120,proposed,2022,NA,NA,23.0480549,114.0633121,G409945,0.15768,Guangdong,gas
+Dongguan Qishi Natural Gas power station,东莞企石天然气分布式热电厂,120,proposed,2022,NA,NA,23.0480549,114.0633121,G409944,0.15768,Guangdong,gas
+Dongguan Zhongdian New Energy Thermal power station,东莞中电新能源热电厂,180,operating,2006,NA,NA,22.975775,113.828442,G405220,0.23652,Guangdong,gas
+Dongguan Zhongdian New Energy Thermal power station,东莞中电新能源热电厂,180,operating,2006,NA,NA,22.975775,113.828442,G405221,0.23652,Guangdong,gas
+Dongguan Zhongdian New Energy Thermal power station,东莞中电新能源热电厂,470,operating,2016,NA,NA,22.975775,113.828442,G405222,0.61758,Guangdong,gas
+Dongguan Zhongdian New Energy Thermal power station,东莞中电新能源热电厂,470,operating,2016,NA,NA,22.975775,113.828442,G405223,0.61758,Guangdong,gas
+Dongguan Zhongming Gas power station,东莞众明燃气发电厂,180,operating,2006,NA,NA,22.972014,113.845928,G405197,0.23652,Guangdong,gas
+Dongguan Zhongming Gas power station,东莞众明燃气发电厂,180,operating,2006,NA,NA,22.972014,113.845928,G405198,0.23652,Guangdong,gas
+Dongguan Zhongtang Gas Thermal power station,东莞中堂燃气热电厂,460,operating,2021,NA,NA,23.113609,113.66788,G405203,0.60444,Guangdong,gas
+Dongguan Zhongtang Gas Thermal power station,东莞中堂燃气热电厂,460,operating,2021,NA,NA,23.113609,113.66788,G405204,0.60444,Guangdong,gas
+Dongguan Zhongtang Gas Thermal power station,东莞中堂燃气热电厂,460,operating,2022,NA,NA,23.113609,113.66788,G405826,0.60444,Guangdong,gas
+Dongguan Zhongtang Gas Thermal power station,东莞中堂燃气热电厂,460,construction,2022,NA,NA,23.113609,113.66788,G405827,0.60444,Guangdong,gas
+East Asia Power Wuxi Gas power station,东亚电力无锡燃气发电厂,400,operating,2018,NA,NA,31.695354,120.465971,G405483,0.5256,Jiangsu,gas
+East Asia Power Wuxi Gas power station,东亚电力无锡燃气发电厂,400,operating,2019,NA,NA,31.695354,120.465971,G405484,0.5256,Jiangsu,gas
+Foshan Funeng Gas power station,佛山市福能发电厂,180,operating,2003,NA,NA,23.038279,113.04771,G405230,0.23652,Guangdong,gas
+Foshan Funeng Gas power station,佛山市福能发电厂,180,operating,2003,NA,NA,23.038279,113.04771,G405231,0.23652,Guangdong,gas
+Foshan Longjiang Thermal power station,佛山龙江片区燃气热电厂,76,shelved,2020,NA,NA,22.872816,113.031111,G405235,0.099864,Guangdong,gas
+Foshan Longjiang Thermal power station,佛山龙江片区燃气热电厂,76,shelved,2020,NA,NA,22.872816,113.031111,G405236,0.099864,Guangdong,gas
+Foshan Longjiang Thermal power station,佛山龙江片区燃气热电厂,76,shelved,2025,NA,NA,22.872816,113.031111,G405237,0.099864,Guangdong,gas
+Foshan Xingtan Thermal Gas power station,佛山杏坛片区燃气热电厂,59,shelved,2020,NA,NA,22.747129,113.205012,G405781,0.077526,Guangdong,gas
+Foshan Xingtan Thermal Gas power station,佛山杏坛片区燃气热电厂,59,shelved,2020,NA,NA,22.747129,113.205012,G405782,0.077526,Guangdong,gas
+Foshan Xingtan Thermal Gas power station,佛山杏坛片区燃气热电厂,59,shelved,2020,NA,NA,22.747129,113.205012,G405783,0.077526,Guangdong,gas
+GCL Guangzhou Lantian Gas Thermal power station,广州协鑫蓝天燃气热电站,180,operating,2015,NA,NA,23.212501,113.572592,G405289,0.23652,Guangdong,gas
+GCL Guangzhou Lantian Gas Thermal power station,广州协鑫蓝天燃气热电站,180,operating,2015,NA,NA,23.212501,113.572592,G405290,0.23652,Guangdong,gas
+GCL Kunshan Lantian Distributed Gas power station,昆山协鑫蓝天天然气分布式能源站,60,operating,2018,NA,NA,31.447321,120.903723,G405547,0.07884,Jiangsu,gas
+GCL Kunshan Lantian Distributed Gas power station,昆山协鑫蓝天天然气分布式能源站,60,operating,2018,NA,NA,31.447321,120.903723,G405548,0.07884,Jiangsu,gas
+GCL Nanjing Lantian Gas Thermal power station,协鑫南京蓝天燃机热电厂,200,operating,2018,NA,NA,31.881775,118.83744,G405543,0.2628,Jiangsu,gas
+GCL Nanjing Lantian Gas Thermal power station,协鑫南京蓝天燃机热电厂,200,operating,2018,NA,NA,31.881775,118.83744,G405544,0.2628,Jiangsu,gas
+GCL Qinzhou Zhongma Distributed Gas power station,协鑫钦州中马天然气分布式能源站,75,operating,2021,NA,NA,21.756051,108.668202,G405401,0.09855,Guangxi,gas
+GCL Suzhou Economic Zone Lantian Gas Thermal power station,协鑫苏州工业园蓝天燃气热电厂,180,operating,2005,NA,NA,31.300607,120.799921,G405551,0.23652,Jiangsu,gas
+GCL Suzhou Economic Zone Lantian Gas Thermal power station,协鑫苏州工业园蓝天燃气热电厂,180,operating,2005,NA,NA,31.300607,120.799921,G405552,0.23652,Jiangsu,gas
+GCL Suzhou Economic Zone North Gas Thermal power station,协鑫苏州工业园北部燃机热电厂,180,operating,2013,NA,NA,31.332014,120.655939,G405549,0.23652,Jiangsu,gas
+GCL Suzhou Economic Zone North Gas Thermal power station,协鑫苏州工业园北部燃机热电厂,180,operating,2013,NA,NA,31.332014,120.655939,G405550,0.23652,Jiangsu,gas
+GCL Wuxi Lantian Gas Thermal power station,协鑫无锡蓝天燃机热电厂,200,operating,2015,NA,NA,31.580909,120.417291,G405545,0.2628,Jiangsu,gas
+GCL Wuxi Lantian Gas Thermal power station,协鑫无锡蓝天燃机热电厂,200,operating,2015,NA,NA,31.580909,120.417291,G405546,0.2628,Jiangsu,gas
+Guangzhou Development Zone East Gas Thermal power station,广州开发区东区热电厂（广东恒运热电）,460,construction,2022,NA,NA,23.128694,113.515337,G405296,0.60444,Guangdong,gas
+Guangzhou Development Zone East Gas Thermal power station,广州开发区东区热电厂（广东恒运热电）,460,construction,2023,NA,NA,23.128694,113.515337,G405297,0.60444,Guangdong,gas
+Guangzhou Pearl River LNG power station,广州珠江LNG电厂,390,operating,2006,NA,NA,22.814326,113.5654,G405298,0.51246,Guangdong,gas
+Guangzhou Pearl River LNG power station,广州珠江LNG电厂,390,operating,2007,NA,NA,22.814326,113.5654,G405299,0.51246,Guangdong,gas
+Guangzhou Pearl River LNG power station,广州珠江LNG电厂,600,construction,2023,NA,NA,22.814326,113.5654,G405300,0.7884,Guangdong,gas
+Guangzhou Pearl River LNG power station,广州珠江LNG电厂,600,construction,2023,NA,NA,22.814326,113.5654,G405301,0.7884,Guangdong,gas
+Guangzhou University City Distributed Gas power station,广州大学城天然气分布式电厂,78,operating,2009,NA,NA,23.023378,113.398392,G405294,0.102492,Guangdong,gas
+Guangzhou University City Distributed Gas power station,广州大学城天然气分布式电厂,78,operating,2009,NA,NA,23.023378,113.398392,G405295,0.102492,Guangdong,gas
+Guodian Binhai power station,国电滨海发电厂,54,operating,2000,NA,NA,38.985802,117.654559,G405697,0.070956,Tianjin,gas
+Guodian Nanxun Gas Thermal power station,国电南浔天然气热电厂,100,operating,2018,NA,NA,30.860082,120.346731,G405725,0.1314,Zhejiang,gas
+Guodian Nanxun Gas Thermal power station,国电南浔天然气热电厂,100,operating,2018,NA,NA,30.860082,120.346731,G405726,0.1314,Zhejiang,gas
+Guodian Zhongshan Minzhong Gas Thermal power station,国电中山民众天然气热电站,269,operating,2019,NA,NA,22.67285,113.496632,G405277,0.353466,Guangdong,gas
+Guodian Zhongshan Minzhong Gas Thermal power station,国电中山民众天然气热电站,269,operating,2019,NA,NA,22.67285,113.496632,G405278,0.353466,Guangdong,gas
+Guohua Yuyao Gas power station,国能浙江余姚燃气发电厂,780,operating,2007,NA,NA,30.066544,121.103506,G405756,1.02492,Zhejiang,gas
+Guoxin Gaoyou Gas Thermal power station,国信高邮燃机热电厂,100,operating,2017,NA,NA,32.820208,119.477512,G405572,0.1314,Jiangsu,gas
+Guoxin Gaoyou Gas Thermal power station,国信高邮燃机热电厂,100,operating,2017,NA,NA,32.820208,119.477512,G405573,0.1314,Jiangsu,gas
+Guoxin Huai'an Gas Thermal power station,国信淮安燃气发电厂,180,operating,2017,NA,NA,33.463756,119.159463,G405564,0.23652,Jiangsu,gas
+Guoxin Huai'an Gas Thermal power station,国信淮安燃气发电厂,180,operating,2017,NA,NA,33.463756,119.159463,G405565,0.23652,Jiangsu,gas
+Guoxin Huai'an No.2 Gas Thermal power station,国信淮安第二燃气发电厂,460,operating,2017,NA,NA,33.376849,119.030217,G405566,0.60444,Jiangsu,gas
+Guoxin Huai'an No.2 Gas Thermal power station,国信淮安第二燃气发电厂,460,operating,2017,NA,NA,33.376849,119.030217,G405567,0.60444,Jiangsu,gas
+Guoxin Xielian Gas Thermal power station,国信协联燃气热电厂,420,operating,2015,NA,NA,31.397538,119.827095,G405562,0.55188,Jiangsu,gas
+Guoxin Xielian Gas Thermal power station,国信协联燃气热电厂,420,operating,2015,NA,NA,31.397538,119.827095,G405563,0.55188,Jiangsu,gas
+Guoxin Yizheng Gas Thermal power station,国信仪征燃机热电厂,100,operating,2018,NA,NA,32.301681,119.186361,G405560,0.1314,Jiangsu,gas
+Guoxin Yizheng Gas Thermal power station,国信仪征燃机热电厂,100,operating,2018,NA,NA,32.301681,119.186361,G405561,0.1314,Jiangsu,gas
+Hanneng Power Tunkou Gas power station,汉能电力沌口燃机电厂,176.5,operating,1996,NA,NA,30.470794,114.203538,G405473,0.231921,Hubei,gas
+Hefei Airport Distributed Gas power station,中电合肥空港天然气分布式能源站,60,operating,2018,NA,NA,31.961048,117.020871,G405154,0.07884,Anhui,gas
+Hefei Airport Distributed Gas power station,中电合肥空港天然气分布式能源站,60,operating,2018,NA,NA,31.961048,117.020871,G405155,0.07884,Anhui,gas
+Huachen Zhangjiagang Huaxing Gas power station,华晨电力张家港华兴燃气发电厂,390,operating,2005,NA,NA,31.88699,120.595839,G405493,0.51246,Jiangsu,gas
+Huachen Zhangjiagang Huaxing Gas power station,华晨电力张家港华兴燃气发电厂,390,operating,2006,NA,NA,31.88699,120.595839,G405494,0.51246,Jiangsu,gas
+Huachen Zhangjiagang Huaxing Gas power station,华晨电力张家港华兴燃气发电厂,400,operating,2021,NA,NA,31.88699,120.595839,G405495,0.5256,Jiangsu,gas
+Huachen Zhangjiagang Huaxing Gas power station,华晨电力张家港华兴燃气发电厂,400,operating,2021,NA,NA,31.88699,120.595839,G405496,0.5256,Jiangsu,gas
+Huadian Beijing Zhengchangzhuang Thermal power station,华电北京(郑常庄)热电厂,254,operating,2008,NA,NA,39.889522,116.272586,G405170,0.333756,Beijing,gas
+Huadian Beijing Zhengchangzhuang Thermal power station,华电北京(郑常庄)热电厂,254,operating,2008,NA,NA,39.889522,116.272586,G405171,0.333756,Beijing,gas
+Huadian Beiran Gas Thermal power station,北京华电北燃电厂,80,operating,2018,NA,NA,39.907848,116.694629,G405172,0.10512,Beijing,gas
+Huadian Beiran Gas Thermal power station,北京华电北燃电厂,74,operating,2019,NA,NA,39.907848,116.694629,G405173,0.097236,Beijing,gas
+Huadian Beiran Gas Thermal power station,北京华电北燃电厂,74,operating,2020,NA,NA,39.907848,116.694629,G405174,0.097236,Beijing,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,390,operating,2005,NA,NA,30.361012,120.141861,G405711,0.51246,Zhejiang,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,390,operating,2005,NA,NA,30.361012,120.141861,G405712,0.51246,Zhejiang,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,390,operating,2005,NA,NA,30.361012,120.141861,G405713,0.51246,Zhejiang,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,415,operating,2012,NA,NA,30.361012,120.141861,G405714,0.54531,Zhejiang,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,415,operating,2012,NA,NA,30.361012,120.141861,G405715,0.54531,Zhejiang,gas
+Huadian Hangzhou Banshan power station,杭州华电半山发电厂,415,operating,2012,NA,NA,30.361012,120.141861,G405716,0.54531,Zhejiang,gas
+Huadian Hangzhou Xiasha Thermal power station,华电杭州下沙热电厂,123,operating,2014,NA,NA,30.340843,120.349535,G405717,0.161622,Zhejiang,gas
+Huadian Hangzhou Xiasha Thermal power station,华电杭州下沙热电厂,123,operating,2014,NA,NA,30.340843,120.349535,G405718,0.161622,Zhejiang,gas
+Huadian Heshan Gas Thermal power station,华电广东鹤山燃机热电站,115,proposed,2023,NA,NA,22.780068,112.902984,G405784,0.15111,Guangdong,gas
+Huadian Heshan Gas Thermal power station,华电广东鹤山燃机热电站,115,proposed,2023,NA,NA,22.780068,112.902984,G405785,0.15111,Guangdong,gas
+Huadian Heshan Gas Thermal power station,华电广东鹤山燃机热电站,115,proposed,2023,NA,NA,22.780068,112.902984,G405786,0.15111,Guangdong,gas
+Huadian Huizhou Dongjiang Gas cogeneration power station,华电广东惠州东江燃机热电厂,460,proposed,2023,NA,NA,23.116553,114.516829,G409413,0.60444,Guangdong,gas
+Huadian Huizhou Dongjiang Gas cogeneration power station,华电广东惠州东江燃机热电厂,460,proposed,2023,NA,NA,23.116553,114.516829,G409412,0.60444,Guangdong,gas
+Huadian Jiangdong Thermal power station,华电江东热电厂,480,operating,2015,NA,NA,30.343409,120.552169,G405719,0.63072,Zhejiang,gas
+Huadian Jiangdong Thermal power station,华电江东热电厂,480,operating,2015,NA,NA,30.343409,120.552169,G405720,0.63072,Zhejiang,gas
+Huadian Jiangmen Distributed Gas power station,华电江门蓬沙江沙分布式能源站,115,operating,2018,NA,NA,22.693712,112.996593,G405257,0.15111,Guangdong,gas
+Huadian Jiangmen Distributed Gas power station,华电江门蓬沙江沙分布式能源站,115,operating,2018,NA,NA,22.693712,112.996593,G405258,0.15111,Guangdong,gas
+Huadian Kunshan Thermal power plant,华电昆山东部燃机热电厂,451,operating,2017,NA,NA,31.34691,121.057601,G405523,0.592614,Jiangsu,gas
+Huadian Kunshan Thermal power plant,华电昆山东部燃机热电厂,451,operating,2017,NA,NA,31.34691,121.057601,G405524,0.592614,Jiangsu,gas
+Huadian Longyou Thermal power station,华电龙游热电厂,203,operating,2015,NA,NA,29.102801,119.223022,G405721,0.266742,Zhejiang,gas
+Huadian Longyou Thermal power station,华电龙游热电厂,203,operating,2015,NA,NA,29.102801,119.223022,G405722,0.266742,Zhejiang,gas
+Huadian Nanning Jiangnan Distributed Gas power station,华电南宁江南分布式能源站,60,operating,2014,NA,NA,22.799468,108.238976,G405391,0.07884,Guangxi,gas
+Huadian Nanning Jiangnan Distributed Gas power station,华电南宁江南分布式能源站,60,operating,2014,NA,NA,22.799468,108.238976,G405392,0.07884,Guangxi,gas
+Huadian Nantong Tongzhou Gas power station,华电南通通州燃机发电厂,200,operating,2016,NA,NA,32.016715,121.053118,G405507,0.2628,Jiangsu,gas
+Huadian Nantong Tongzhou Gas power station,华电南通通州燃机发电厂,200,operating,2016,NA,NA,32.016715,121.053118,G405508,0.2628,Jiangsu,gas
+Huadian Pingshan Distributed Gas power station,华电坪山分布式能源站,120,operating,2018,NA,NA,22.727749,114.396292,G405253,0.15768,Guangdong,gas
+Huadian Pingshan Distributed Gas power station,华电坪山分布式能源站,245,operating,2019,NA,NA,22.727749,114.396292,G405254,0.32193,Guangdong,gas
+Huadian Qingyuan Huaqiao Industrial Park Distributed Gas power station,广东华电清远华侨工业园天然气分布式能源站,75,proposed,2022,NA,NA,24.220006,113.674963,G409882,0.09855,Guangdong,gas
+Huadian Qingyuan Huaqiao Industrial Park Distributed Gas power station,广东华电清远华侨工业园天然气分布式能源站,75,proposed,2022,NA,NA,24.220006,113.674963,G409881,0.09855,Guangdong,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,390,operating,2005,NA,NA,31.735994,120.036947,G405515,0.51246,Jiangsu,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,390,operating,2005,NA,NA,31.735994,120.036947,G405516,0.51246,Jiangsu,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,220,operating,2011,NA,NA,31.735994,120.036947,G405517,0.28908,Jiangsu,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,220,operating,2011,NA,NA,31.735994,120.036947,G405518,0.28908,Jiangsu,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,475,operating,2015,NA,NA,31.735994,120.036947,G405519,0.62415,Jiangsu,gas
+Huadian Qishuyan Gas power station,华电戚墅堰燃机发电厂,475,operating,2015,NA,NA,31.735994,120.036947,G405520,0.62415,Jiangsu,gas
+Huadian Sanshui Distributed Gas power station,华电三水天然气分布式能源站,59,operating,2018,NA,NA,23.259401,112.990974,G405250,0.077526,Guangdong,gas
+Huadian Sanshui Distributed Gas power station,华电三水天然气分布式能源站,59,operating,2018,NA,NA,23.259401,112.990974,G405251,0.077526,Guangdong,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,180,operating,2004,NA,NA,30.976344,121.495892,G405654,0.23652,Shanghai,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,180,operating,2004,NA,NA,30.976344,121.495892,G405655,0.23652,Shanghai,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,180,operating,2004,NA,NA,30.976344,121.495892,G405656,0.23652,Shanghai,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,180,operating,2004,NA,NA,30.976344,121.495892,G405657,0.23652,Shanghai,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,430,operating,2015,NA,NA,30.976344,121.495892,G405658,0.56502,Shanghai,gas
+Huadian Shanghai Fengxian Gas power station,华电上海奉贤燃机发电厂,430,operating,2015,NA,NA,30.976344,121.495892,G405659,0.56502,Shanghai,gas
+Huadian Shijiazhuang Thermal power station,华电石家庄燃气热电厂,453,operating,2019,NA,NA,38.06214,114.523836,G405431,0.595242,Hebei,gas
+Huadian Shunde Longjiang Distributed Gas power station,华电顺德龙江燃气分布式能源站,76,proposed,2024,NA,NA,22.870053,113.009387,G405261,0.099864,Guangdong,gas
+Huadian Shunde Longjiang Distributed Gas power station,华电顺德龙江燃气分布式能源站,76,proposed,2024,NA,NA,22.870053,113.009387,G405262,0.099864,Guangdong,gas
+Huadian Shunde Longjiang Distributed Gas power station,华电顺德龙江燃气分布式能源站,500,proposed,2023,NA,NA,22.870053,113.009387,G405263,0.657,Guangdong,gas
+Huadian Tianjin Beichen Distributed Gas power station,华电天津北宸分布式能源站,60,operating,2018,NA,NA,39.300646,117.190542,G405687,0.07884,Tianjin,gas
+Huadian Tianjin Beichen Distributed Gas power station,华电天津北宸分布式能源站,60,operating,2018,NA,NA,39.300646,117.190542,G405688,0.07884,Tianjin,gas
+Huadian Tianjin Fuyuan Thermal power station,华电天津福源热电厂,200,operating,2014,NA,NA,39.434616,116.983947,G405690,0.2628,Tianjin,gas
+Huadian Tianjin Fuyuan Thermal power station,华电天津福源热电厂,200,operating,2014,NA,NA,39.434616,116.983947,G405691,0.2628,Tianjin,gas
+Huadian Tianjin Nanjiang Thermal power station,华电天津南疆热电厂,930,operating,2019,NA,NA,38.958533,117.576068,G405689,1.22202,Tianjin,gas
+Huadian Wangting power station,华电望亭发电厂,390,operating,2005,NA,NA,31.44435,120.437,G405527,0.51246,Jiangsu,gas
+Huadian Wangting power station,华电望亭发电厂,390,operating,2005,NA,NA,31.44435,120.437,G405528,0.51246,Jiangsu,gas
+Huadian Wangting power station,华电望亭发电厂,485,construction,2023,NA,NA,31.44435,120.437,G405529,0.63729,Jiangsu,gas
+Huadian Wangting power station,华电望亭发电厂,485,construction,2023,NA,NA,31.44435,120.437,G405530,0.63729,Jiangsu,gas
+Huadian Wuchang Gas Thermal power station,华电武昌燃机热电厂,185,operating,2010,NA,NA,30.579805,114.312095,G405465,0.24309,Hubei,gas
+Huadian Wuchang Gas Thermal power station,华电武昌燃机热电厂,185,operating,2015,NA,NA,30.579805,114.312095,G405466,0.24309,Hubei,gas
+Huadian Wujiang Gas power station,华电吴江热电厂,180,operating,2013,NA,NA,30.973956,120.628798,G405511,0.23652,Jiangsu,gas
+Huadian Wujiang Gas power station,华电吴江热电厂,180,operating,2013,NA,NA,30.973956,120.628798,G405512,0.23652,Jiangsu,gas
+Huadian Xiangyang Fancheng Gas Thermal power station,华电襄阳樊城燃机热电厂,122.8,operating,2021,NA,NA,32.07576,112.086038,G405467,0.16135919999999998,Hubei,gas
+Huadian Xiangyang Fancheng Gas Thermal power station,华电襄阳樊城燃机热电厂,122.8,operating,2021,NA,NA,32.07576,112.086038,G405468,0.16135919999999998,Hubei,gas
+Huadian Yangzhou Gas power station,华电扬州燃机电厂,475,operating,2017,NA,NA,32.42998,119.4759,G405521,0.62415,Jiangsu,gas
+Huadian Yangzhou Gas power station,华电扬州燃机电厂,475,operating,2017,NA,NA,32.42998,119.4759,G405522,0.62415,Jiangsu,gas
+Huadian Yizheng Thermal power station,华电仪征热电厂,200,operating,2012,NA,NA,32.287236,119.054979,G405501,0.2628,Jiangsu,gas
+Huadian Yizheng Thermal power station,华电仪征热电厂,200,operating,2012,NA,NA,32.287236,119.054979,G405502,0.2628,Jiangsu,gas
+Huadian Yizheng Thermal power station,华电仪征热电厂,200,operating,2012,NA,NA,32.287236,119.054979,G405503,0.2628,Jiangsu,gas
+Huadian Zengcheng Gas Thermal power station,华电广州增城燃气热电厂,670,operating,2020,NA,NA,23.172274,113.676664,G405255,0.88038,Guangdong,gas
+Huadian Zengcheng Gas Thermal power station,华电广州增城燃气热电厂,670,operating,2020,NA,NA,23.172274,113.676664,G405256,0.88038,Guangdong,gas
+Huadian Zizhuang Gas power station,上海华电莘庄工业区燃气热电厂,60,operating,2015,NA,NA,31.059585,121.357885,G405660,0.07884,Shanghai,gas
+Huadian Zizhuang Gas power station,上海华电莘庄工业区燃气热电厂,60,operating,2015,NA,NA,31.059585,121.357885,G405661,0.07884,Shanghai,gas
+Huahai Energy Deqing Gas Thermal power station,华海能源德庆工业园天然气热电厂,100,proposed,2022,NA,NA,23.140864,111.807434,G405238,0.1314,Guangdong,gas
+Huahai Energy Deqing Gas Thermal power station,华海能源德庆工业园天然气热电厂,100,proposed,2022,NA,NA,23.140864,111.807434,G405239,0.1314,Guangdong,gas
+Huaneng Beijing Thermal power station,华能北京热电厂,845,operating,1999,NA,NA,39.885361,116.53537,G405759,1.11033,Beijing,gas
+Huaneng Beijing Thermal power station,华能北京热电厂,924,operating,2011,NA,NA,39.885361,116.53537,G405175,1.214136,Beijing,gas
+Huaneng Beijing Thermal power station,华能北京热电厂,998,operating,2017,NA,NA,39.885361,116.53537,G405176,1.311372,Beijing,gas
+Huaneng Chongqing Liangjiang Gas power station,华能重庆两江燃机发电厂,470,operating,2014,NA,NA,29.784345,106.512695,G405180,0.61758,Chongqing,gas
+Huaneng Chongqing Liangjiang Gas power station,华能重庆两江燃机发电厂,470,operating,2014,NA,NA,29.784345,106.512695,G405181,0.61758,Chongqing,gas
+Huaneng Dongguan Gas Thermal power station,华能东莞燃机热电,475,operating,2020,NA,NA,22.983207,114.102517,G405264,0.62415,Guangdong,gas
+Huaneng Guilin Distributed Gas power station,华能桂林燃气分布式能源站,70,operating,2017,NA,NA,25.210686,110.180593,G405395,0.09198,Guangxi,gas
+Huaneng Guilin Distributed Gas power station,华能桂林燃气分布式能源站,70,operating,2017,NA,NA,25.210686,110.180593,G405396,0.09198,Guangxi,gas
+Huaneng Guilin Distributed Gas power station,华能桂林燃气分布式能源站,70,operating,2017,NA,NA,25.210686,110.180593,G405397,0.09198,Guangxi,gas
+Huaneng Jiangyin Gas Thermal power station,华能江阴燃机热电厂,400,operating,2020,NA,NA,31.759171,120.385457,G405539,0.5256,Jiangsu,gas
+Huaneng Jiangyin Gas Thermal power station,华能江阴燃机热电厂,400,operating,2020,NA,NA,31.759171,120.385457,G405540,0.5256,Jiangsu,gas
+Huaneng Nanjing Jinling Gas power station,华能南京金陵燃机发电厂,390,operating,2006,NA,NA,32.170428,119.011004,G405531,0.51246,Jiangsu,gas
+Huaneng Nanjing Jinling Gas power station,华能南京金陵燃机发电厂,390,operating,2007,NA,NA,32.170428,119.011004,G405532,0.51246,Jiangsu,gas
+Huaneng Nanjing Jinling Gas power station,华能南京金陵燃机发电厂,191,operating,2013,NA,NA,32.170428,119.011004,G405533,0.250974,Jiangsu,gas
+Huaneng Nanjing Jinling Gas power station,华能南京金陵燃机发电厂,191,operating,2013,NA,NA,32.170428,119.011004,G405534,0.250974,Jiangsu,gas
+Huaneng Nanshan Gas power station,华能南山燃气发电厂,66,operating,1994,NA,NA,18.318066,109.159802,G405411,0.086724,Hainan,gas
+Huaneng Nanshan Gas power station,华能南山燃气发电厂,66,operating,1995,NA,NA,18.318066,109.159802,G405412,0.086724,Hainan,gas
+Huaneng Nantong power station,华能南通电厂,745,construction,2022,NA,NA,32.03214,120.76956,G405535,0.97893,Jiangsu,gas
+Huaneng Nantong power station,华能南通电厂,745,construction,2022,NA,NA,32.03214,120.76956,G405536,0.97893,Jiangsu,gas
+Huaneng Shanghai Gas power station,华能上海燃机电厂,400,operating,2006,NA,NA,31.4639,121.4044,G405662,0.5256,Shanghai,gas
+Huaneng Shanghai Gas power station,华能上海燃机电厂,400,operating,2006,NA,NA,31.4639,121.4044,G405663,0.5256,Shanghai,gas
+Huaneng Shanghai Gas power station,华能上海燃机电厂,400,operating,2006,NA,NA,31.4639,121.4044,G405664,0.5256,Shanghai,gas
+Huaneng Suzhou Gas power station,华能苏州燃机热电厂,255,operating,2017,NA,NA,31.262456,120.564338,G405541,0.33507,Jiangsu,gas
+Huaneng Suzhou Gas power station,华能苏州燃机热电厂,255,operating,2017,NA,NA,31.262456,120.564338,G405542,0.33507,Jiangsu,gas
+Huaneng Taiyuan Dongshan Gas Thermal power station,华能太原东山燃机热电厂,430,operating,2015,NA,NA,37.888739,112.664857,G405673,0.56502,Shanxi,gas
+Huaneng Taiyuan Dongshan Gas Thermal power station,华能太原东山燃机热电厂,430,operating,2015,NA,NA,37.888739,112.664857,G405674,0.56502,Shanxi,gas
+Huaneng Tianjin Lingang Gas Thermal power station,华能天津临港燃机热电厂,463,operating,2014,NA,NA,38.923729,117.72779,G405695,0.608382,Tianjin,gas
+Huaneng Yangpu Gas power station,华能洋浦燃气热电厂,460,construction,2022,NA,NA,19.832144,109.203812,G405415,0.60444,Hainan,gas
+Huaneng Yangpu Gas power station,华能洋浦燃气热电厂,460,construction,2022,NA,NA,19.832144,109.203812,G405416,0.60444,Hainan,gas
+Huaneng Zhongyuan Gas power station,华能中原燃气发电厂,390,operating,2007,NA,NA,32.957829,114.063822,G405449,0.51246,Henan,gas
+Huaneng Zhongyuan Gas power station,华能中原燃气发电厂,390,operating,2008,NA,NA,32.957829,114.063822,G405450,0.51246,Henan,gas
+Huanneng Tongxiang Gas Thermal power station,华能桐乡燃机热电厂,229,operating,2014,NA,NA,30.593104,120.35733,G405723,0.300906,Zhejiang,gas
+Huanneng Tongxiang Gas Thermal power station,华能桐乡燃机热电厂,229,operating,2014,NA,NA,30.593104,120.35733,G405724,0.300906,Zhejiang,gas
+Huizhou Daya Bay Petrochemical Zone Comprehensive Energy Station,广东粤电大亚湾综合能源有限公司,670,proposed,2023,NA,NA,22.739812,114.563676,G409858,0.88038,Guangdong,gas
+Huizhou Daya Bay Petrochemical Zone Comprehensive Energy Station,广东粤电大亚湾综合能源有限公司,670,proposed,2023,NA,NA,22.739812,114.563676,G409857,0.88038,Guangdong,gas
+Inner Mongolia Sulige Gas power station,内蒙古苏里格燃气发电厂,150,operating,2006,NA,NA,38.539665,108.813119,G405481,0.1971,Inner Mongolia,gas
+Inner Mongolia Sulige Gas power station,内蒙古苏里格燃气发电厂,150,operating,2006,NA,NA,38.539665,108.813119,G405482,0.1971,Inner Mongolia,gas
+Jiangmen Distributed Natural Gas power station,中国电力江门综能天然气分布式能源站项目,60,operating,2021,NA,NA,22.576336,113.162253,G409864,0.07884,Guangdong,gas
+Jiangmen Distributed Natural Gas power station,中国电力江门综能天然气分布式能源站项目,60,operating,2021,NA,NA,22.576336,113.162253,G409863,0.07884,Guangdong,gas
+Jiangmen Taishan New Industrial Zone Distributed Gas power station,江门台山工业新城分布式能源电站,81,proposed,2022,NA,NA,22.38038,112.824086,G405799,0.106434,Guangdong,gas
+Jiangmen Taishan New Industrial Zone Distributed Gas power station,江门台山工业新城分布式能源电站,81,proposed,2022,NA,NA,22.38038,112.824086,G405800,0.106434,Guangdong,gas
+Jiangsu Changzhou Suyuan power station,江苏常州苏源发电厂,51,operating,1996,NA,NA,31.842036,119.963182,G405599,0.067014,Jiangsu,gas
+Jiangsu Huafeng Microfiber Distributed Energy Station,江苏华峰超纤分布式能源站,50,operating,2021,NA,NA,32.03667,121.729948,G405597,0.0657,Jiangsu,gas
+Jiangsu Huafeng Microfiber Distributed Energy Station,江苏华峰超纤分布式能源站,50,operating,2021,NA,NA,32.03667,121.729948,G405598,0.0657,Jiangsu,gas
+Jiangsu Rudong Combined Cycle Gas Turbine power station,江苏如东天然气联合循环发电厂,1560,operating,2011,NA,NA,32.450155,121.303627,G405772,2.04984,Jiangsu,gas
+Jiangsu Rudong Combined Cycle Gas Turbine power station,江苏如东天然气联合循环发电厂,1560,operating,2011,NA,NA,32.450155,121.303627,G405773,2.04984,Jiangsu,gas
+Jiangsu Zhenjiang Gas Thermal power station,江苏镇江燃气热电厂,475,operating,2021,NA,NA,32.12704,119.479817,G405595,0.62415,Jiangsu,gas
+Jiangsu Zhenjiang Gas Thermal power station,江苏镇江燃气热电厂,475,operating,2021,NA,NA,32.12704,119.479817,G405596,0.62415,Jiangsu,gas
+Jinjiang Gas power station,晋江燃气电厂,390,operating,2009,NA,NA,24.563737,118.643338,G405192,0.51246,Fujian,gas
+Jinjiang Gas power station,晋江燃气电厂,390,operating,2009,NA,NA,24.563737,118.643338,G405193,0.51246,Fujian,gas
+Jinjiang Gas power station,晋江燃气电厂,390,operating,2010,NA,NA,24.563737,118.643338,G405194,0.51246,Fujian,gas
+Jinjiang Gas power station,晋江燃气电厂,390,operating,2010,NA,NA,24.563737,118.643338,G405195,0.51246,Fujian,gas
+Jixuan Energy Huashan Gas Thermal power station,济宣能源华山热电厂,75,construction,2021,NA,NA,36.76676,117.092527,G405637,0.09855,Shandong,gas
+Jixuan Energy Huashan Gas Thermal power station,济宣能源华山热电厂,75,construction,2021,NA,NA,36.76676,117.092527,G405638,0.09855,Shandong,gas
+Laixi Guhe Thermal power station,山东莱西沽河热电厂,NA,proposed,2023,NA,NA,36.842994,120.406747,G409873,NA,Shandong,gas
+Laixi Guhe Thermal power station,山东莱西沽河热电厂,NA,proposed,2023,NA,NA,36.842994,120.406747,G409872,NA,Shandong,gas
+Luoyang Wanzhong Jili Gas Thermal power station,洛阳万众吉利热电厂,450,operating,2018,NA,NA,34.908259,112.624757,G405461,0.5913,Henan,gas
+Luoyang Wanzhong Jili Gas Thermal power station,洛阳万众吉利热电厂,450,operating,2019,NA,NA,34.908259,112.624757,G405462,0.5913,Henan,gas
+Nanjing Liuhe District Yangba power station,南京六合区扬巴电厂,52,operating,2005,NA,NA,32.246702,118.805386,G405555,0.068328,Jiangsu,gas
+Nanjing Liuhe District Yangba power station,南京六合区扬巴电厂,52,operating,2005,NA,NA,32.246702,118.805386,G405830,0.068328,Jiangsu,gas
+Nanjing Liuhe District Yangba power station,南京六合区扬巴电厂,52,operating,2005,NA,NA,32.246702,118.805386,G405831,0.068328,Jiangsu,gas
+Neijiang Baima power station,华电内江白马燃气发电厂,475,proposed,2022,NA,NA,29.52596,105.00948,G405678,0.62415,Sichuan,gas
+Neijiang Baima power station,华电内江白马燃气发电厂,475,proposed,2022,NA,NA,29.52596,105.00948,G405679,0.62415,Sichuan,gas
+Ningbo Lvyuan Natural Gas power station,宁波绿源天然气发电厂,101,operating,2009,NA,NA,29.871568,121.413095,G405825,0.132714,Zhejiang,gas
+Ningbo Thermal Power Company Chunxiao Gas Thermal power station,宁波热电股份公司春晓热电站,54.6,operating,2016,NA,NA,29.745607,121.875628,G405824,0.0717444,Zhejiang,gas
+Ningxia East Gas Thermal power station,宁夏东部热电厂,200,operating,2014,NA,NA,38.511733,106.324551,G405613,0.2628,Ningxia,gas
+Ningxia East Gas Thermal power station,宁夏东部热电厂,200,operating,2014,NA,NA,38.511733,106.324551,G405614,0.2628,Ningxia,gas
+Ningxia East Gas Thermal power station,宁夏东部热电厂,200,operating,2014,NA,NA,38.511733,106.324551,G405615,0.2628,Ningxia,gas
+Ningxia East Gas Thermal power station,宁夏东部热电厂,200,operating,2014,NA,NA,38.511733,106.324551,G405616,0.2628,Ningxia,gas
+Puxing Clean Energy Anji power station,普星洁能安吉电厂,158,operating,2014,NA,NA,30.670138,119.685639,G405738,0.207612,Zhejiang,gas
+Puxing Clean Energy Deneng power station,普星洁能德能电厂,56,operating,2005,NA,NA,30.555568,120.006221,G405739,0.073584,Zhejiang,gas
+Puxing Clean Energy Deneng power station,普星洁能德能电厂,56,operating,2005,NA,NA,30.555568,120.006221,G405740,0.073584,Zhejiang,gas
+Puxing Clean Energy Jingxing power station,普星洁能京兴电厂,75,operating,2006,NA,NA,30.992143,119.928182,G405737,0.09855,Zhejiang,gas
+Puxing Clean Energy Lantian power station,普星洁能蓝天电厂,56,operating,2006,NA,NA,30.390084,120.126259,G405741,0.073584,Zhejiang,gas
+Puxing Clean Energy Lantian power station,普星洁能蓝天电厂,56,operating,2006,NA,NA,30.390084,120.126259,G405742,0.073584,Zhejiang,gas
+Puxing Clean Energy Quzhou Gas Thermal power station,普星洁能衢州天然气热电厂,115,operating,2014,NA,NA,28.923375,118.769502,G405743,0.15111,Zhejiang,gas
+Puxing Clean Energy Quzhou Gas Thermal power station,普星洁能衢州天然气热电厂,115,operating,2014,NA,NA,28.923375,118.769502,G405744,0.15111,Zhejiang,gas
+Rongcheng Gas Thermal power station,荣成市天然气热电厂,NA,construction,2022,NA,NA,37.101894,122.403614,G405646,NA,Shandong,gas
+Rongcheng Gas Thermal power station,荣成市天然气热电厂,NA,construction,2022,NA,NA,37.101894,122.403614,G405647,NA,Shandong,gas
+SPIC Hengqin Gas Thermal power station,国家电投珠海横琴热电厂,390,operating,2014,NA,NA,22.127294,113.465923,G405275,0.51246,Guangdong,gas
+SPIC Hengqin Gas Thermal power station,国家电投珠海横琴热电厂,390,operating,2014,NA,NA,22.127294,113.465923,G405276,0.51246,Guangdong,gas
+SPIC Jiangmen Gaoxin District Distributed Gas power station,中电江门高新区分布式能源站,130,operating,2020,NA,NA,22.537043,113.163246,G405779,0.17082,Guangdong,gas
+SPIC Jiangmen Gaoxin District Distributed Gas power station,中电江门高新区分布式能源站,130,operating,2021,NA,NA,22.537043,113.163246,G405780,0.17082,Guangdong,gas
+SPIC Jiedong Gas Thermal power station,国家电投揭东燃气热电站,100,construction,2022,NA,NA,23.615488,116.424782,G405273,0.1314,Guangdong,gas
+SPIC Jiedong Gas Thermal power station,国家电投揭东燃气热电站,100,construction,2022,NA,NA,23.615488,116.424782,G405274,0.1314,Guangdong,gas
+SPIC Kaiping Cuishan Lake Gas Thermal power station,国家电投开平翠山湖燃气热电站,100,construction,2022,NA,NA,22.443011,112.666805,G405271,0.1314,Guangdong,gas
+SPIC Kaiping Cuishan Lake Gas Thermal power station,国家电投开平翠山湖燃气热电站,100,construction,2022,NA,NA,22.443011,112.666805,G405272,0.1314,Guangdong,gas
+SPIC Lisha Island Gas power station,中电国际东莞立沙岛燃机发电厂,200,operating,2020,NA,NA,22.956527,113.575401,G405224,0.2628,Guangdong,gas
+SPIC Lisha Island Gas power station,中电国际东莞立沙岛燃机发电厂,200,operating,2020,NA,NA,22.956527,113.575401,G405225,0.2628,Guangdong,gas
+SPIC Sihui Gas Thermal power station,中电国际四会热电厂,400,operating,2018,NA,NA,23.315626,112.785549,G405226,0.5256,Guangdong,gas
+SPIC Sihui Gas Thermal power station,中电国际四会热电厂,400,operating,2018,NA,NA,23.315626,112.785549,G405227,0.5256,Guangdong,gas
+SPIC Wusongjiang Gas power station,国家电投吴淞江燃机发电厂,80,construction,2022,NA,NA,31.236779,120.664567,G405574,0.10512,Jiangsu,gas
+SPIC Wusongjiang Gas power station,国家电投吴淞江燃机发电厂,80,construction,2022,NA,NA,31.236779,120.664567,G405575,0.10512,Jiangsu,gas
+SPIC Zhengzhou Gas power station,国家电投郑州燃气电厂,390,operating,2007,NA,NA,34.796774,113.5272,G405457,0.51246,Henan,gas
+SPIC Zhengzhou Gas power station,国家电投郑州燃气电厂,390,operating,2007,NA,NA,34.796774,113.5272,G405458,0.51246,Henan,gas
+SPIC Zhoukou Gas power station,国家电投周口燃气电厂,450,operating,2018,NA,NA,33.427935,114.937678,G405455,0.5913,Henan,gas
+SPIC Zhoukou Gas power station,国家电投周口燃气电厂,450,operating,2019,NA,NA,33.427935,114.937678,G405456,0.5913,Henan,gas
+Shanghai Caojing Gas Thermal power station,上海漕泾燃机发电厂,330,operating,2005,NA,NA,30.762899,121.406645,G405648,0.43362,Shanghai,gas
+Shanghai Caojing Gas Thermal power station,上海漕泾燃机发电厂,328,operating,2005,NA,NA,30.762899,121.406645,G405649,0.430992,Shanghai,gas
+Shanghai Electric Power Luojing Gas power station,上海电力罗泾燃机电厂,200,operating,2015,NA,NA,31.467468,121.383146,G405650,0.2628,Shanghai,gas
+Shanghai Electric Power Luojing Gas power station,上海电力罗泾燃机电厂,200,operating,2015,NA,NA,31.467468,121.383146,G405651,0.2628,Shanghai,gas
+Shanghai Electric Power Minhang Gas power station,上海电力闵行燃机发电厂,468,construction,2021,NA,NA,30.990975,121.377502,G405652,0.614952,Shanghai,gas
+Shanghai Electric Power Minhang Gas power station,上海电力闵行燃机发电厂,745,construction,2022,NA,NA,30.990975,121.377502,G405653,0.97893,Shanghai,gas
+Shantou Gas Thermal power station,汕头经济特区天然气热电厂,460,proposed,2022,NA,NA,23.419652,116.726208,G405303,0.60444,Guangdong,gas
+Shantou Gas Thermal power station,汕头经济特区天然气热电厂,460,proposed,2022,NA,NA,23.419652,116.726208,G405304,0.60444,Guangdong,gas
+Shanxi International Electricity Group Taiyuan Jiajie Gas Thermal power station,山西国际电力太原嘉节燃气热电厂,298,operating,2014,NA,NA,37.756969,112.545759,G405675,0.391572,Shanxi,gas
+Shanxi International Electricity Group Taiyuan Jiajie Gas Thermal power station,山西国际电力太原嘉节燃气热电厂,298,operating,2014,NA,NA,37.756969,112.545759,G405676,0.391572,Shanxi,gas
+Shanxi International Electricity Group Taiyuan Jiajie Gas Thermal power station,山西国际电力太原嘉节燃气热电厂,264,operating,2015,NA,NA,37.756969,112.545759,G405677,0.346896,Shanxi,gas
+Shenergy Chongming Gas power station,申能崇明燃气发电厂,424.2,operating,2018,NA,NA,31.588556,121.473926,G405671,0.5573988,Shanghai,gas
+Shenergy Chongming Gas power station,申能崇明燃气发电厂,424.2,operating,2018,NA,NA,31.588556,121.473926,G405672,0.5573988,Shanghai,gas
+Shenergy Shanghai Fengxian Gas Thermal power station,申能上海奉贤燃机热电厂,460,operating,2019,NA,NA,30.820439,121.436126,G405669,0.60444,Shanghai,gas
+Shenergy Shanghai Fengxian Gas Thermal power station,申能上海奉贤燃机热电厂,460,operating,2019,NA,NA,30.820439,121.436126,G405670,0.60444,Shanghai,gas
+Shenergy Shanghai Lingang Gas power station,申能上海临港燃机发电厂,400,operating,2011,NA,NA,30.850728,121.787516,G405665,0.5256,Shanghai,gas
+Shenergy Shanghai Lingang Gas power station,申能上海临港燃机发电厂,400,operating,2011,NA,NA,30.850728,121.787516,G405666,0.5256,Shanghai,gas
+Shenergy Shanghai Lingang Gas power station,申能上海临港燃机发电厂,400,operating,2011,NA,NA,30.850728,121.787516,G405667,0.5256,Shanghai,gas
+Shenergy Shanghai Lingang Gas power station,申能上海临港燃机发电厂,400,operating,2012,NA,NA,30.850728,121.787516,G405668,0.5256,Shanghai,gas
+Shenhua Guohua Beijing Gas Thermal power station,神华国华北京燃气热电厂,951,operating,2015,NA,NA,39.951257,116.619273,G405179,1.249614,Beijing,gas
+Shennan Power Dongguan Gaobu Natural Gas power station,深南电东莞高埗天然气电厂,180,operating,2006,NA,NA,23.126695,113.755391,G405339,0.23652,Guangdong,gas
+Shennan Power Dongguan Gaobu Natural Gas power station,深南电东莞高埗天然气电厂,180,operating,2006,NA,NA,23.126695,113.755391,G405340,0.23652,Guangdong,gas
+Shennan Power Nanshan Thermal power station,深南电南山热电厂,180,operating,2003,NA,NA,22.513172,113.893053,G405343,0.23652,Guangdong,gas
+Shennan Power Nanshan Thermal power station,深南电南山热电厂,180,operating,2003,NA,NA,22.513172,113.893053,G405344,0.23652,Guangdong,gas
+Shennan Power Nanshan Thermal power station,深南电南山热电厂,180,operating,2003,NA,NA,22.513172,113.893053,G405345,0.23652,Guangdong,gas
+Shenyang Thermal power station,沈阳热电厂,NA,operating,2016,NA,NA,41.815237,123.350344,G405608,NA,Liaoning,gas
+Shenzhen Energy East power station,深圳能源东部电厂,390,operating,2006,NA,NA,22.575253,114.442407,G405320,0.51246,Guangdong,gas
+Shenzhen Energy East power station,深圳能源东部电厂,390,operating,2007,NA,NA,22.575253,114.442407,G405321,0.51246,Guangdong,gas
+Shenzhen Energy East power station,深圳能源东部电厂,390,operating,2007,NA,NA,22.575253,114.442407,G405322,0.51246,Guangdong,gas
+Shenzhen Energy Fengda Gas Thermal power station,深能丰达天然气热电厂,180,operating,2005,NA,NA,22.982217,114.488468,G405331,0.23652,Guangdong,gas
+Shenzhen Energy Fengda Gas Thermal power station,深能丰达天然气热电厂,180,operating,2005,NA,NA,22.982217,114.488468,G405332,0.23652,Guangdong,gas
+Shenzhen Energy Fengda Gas Thermal power station,深能丰达天然气热电厂,460,construction,2023,NA,NA,22.982217,114.488468,G405333,0.60444,Guangdong,gas
+Shenzhen Energy Fengda Gas Thermal power station,深能丰达天然气热电厂,460,construction,2023,NA,NA,22.982217,114.488468,G405334,0.60444,Guangdong,gas
+Shenzhen Energy Guangming Gas power station,深能光明燃机电厂,400,construction,2024,NA,NA,22.745534,113.935938,G405310,0.5256,Guangdong,gas
+Shenzhen Energy Guangming Gas power station,深能光明燃机电厂,400,construction,2024,NA,NA,22.745534,113.935938,G405311,0.5256,Guangdong,gas
+Shenzhen Energy Hongwan Gas power station,深能洪燃机湾电厂,180,operating,2005,NA,NA,22.174941,113.472906,G405338,0.23652,Guangdong,gas
+Shenzhen Energy Hongwan Gas power station,深能洪燃机湾电厂,180,operating,2005,NA,NA,22.174941,113.472906,G405337,0.23652,Guangdong,gas
+Shenzhen Energy Zhangyang Gas power station,深能东莞樟洋燃机电厂,180,operating,2004,NA,NA,22.887915,114.09395,G405316,0.23652,Guangdong,gas
+Shenzhen Energy Zhangyang Gas power station,深能东莞樟洋燃机电厂,180,operating,2004,NA,NA,22.887915,114.09395,G405317,0.23652,Guangdong,gas
+Shenzhen Energy Zhangyang Gas power station,深能东莞樟洋燃机电厂,390,operating,2021,NA,NA,22.887915,114.09395,G405318,0.51246,Guangdong,gas
+Shenzhen Energy Zhangyang Gas power station,深能东莞樟洋燃机电厂,390,operating,2021,NA,NA,22.887915,114.09395,G405319,0.51246,Guangdong,gas
+Shenzhen Meishi Gas power station,深圳美视燃气电厂,244,operating,2014,NA,NA,22.54909,113.999293,G405308,0.320616,Guangdong,gas
+Shenzhen Meishi Gas power station,深圳美视燃气电厂,180,operating,2007,NA,NA,22.54909,113.999293,G406247,0.23652,Guangdong,gas
+Shenzhen Meishi Gas power station,深圳美视燃气电厂,260,operating,2014,NA,NA,22.54909,113.999293,G405309,0.34164,Guangdong,gas
+Shenzhen Yuhu Gas power station,深圳钰湖燃气发电厂,180,operating,2004,NA,NA,22.716169,114.136159,G405312,0.23652,Guangdong,gas
+Shenzhen Yuhu Gas power station,深圳钰湖燃气发电厂,180,operating,2004,NA,NA,22.716169,114.136159,G405313,0.23652,Guangdong,gas
+Sichuan Investment Group Dazhou Gas power station,川投达州燃气发电站,350,operating,2015,NA,NA,31.114962,107.484887,G405681,0.4599,Sichuan,gas
+Sichuan Investment Group Dazhou Gas power station,川投达州燃气发电站,350,operating,2015,NA,NA,31.114962,107.484887,G405682,0.4599,Sichuan,gas
+Sichuan Suining Anju Natural Gas power station,华电安居天然气发电厂,600,proposed,2023,NA,NA,30.352381,105.449382,G409868,0.7884,Sichuan,gas
+Sichuan Suining Anju Natural Gas power station,华电安居天然气发电厂,600,proposed,2023,NA,NA,30.352381,105.449382,G409867,0.7884,Sichuan,gas
+Sichuan Suining Anju Natural Gas power station,华电安居天然气发电厂,600,proposed,2023,NA,NA,30.352381,105.449382,G409866,0.7884,Sichuan,gas
+Sichuan Suining Anju Natural Gas power station,华电安居天然气发电厂,600,proposed,2023,NA,NA,30.352381,105.449382,G409865,0.7884,Sichuan,gas
+Southern Grid Hainan Qinglan Gas power station,南方电网海南清澜电厂,50,operating,2005,NA,NA,19.568647,110.764405,G405417,0.0657,Hainan,gas
+Southern Grid Hainan Qinglan Gas power station,南方电网海南清澜电厂,50,operating,2005,NA,NA,19.568647,110.764405,G405418,0.0657,Hainan,gas
+Southern Grid Hainan Qinglan Gas power station,南方电网海南清澜电厂,50,operating,2005,NA,NA,19.568647,110.764405,G405419,0.0657,Hainan,gas
+Southern Grid Hainan Wenchang Gas power station,南方电网海南文昌燃气电厂,460,operating,2020,NA,NA,19.788535,110.716477,G405420,0.60444,Hainan,gas
+Southern Grid Hainan Wenchang Gas power station,南方电网海南文昌燃气电厂,460,operating,2020,NA,NA,19.788535,110.716477,G405421,0.60444,Hainan,gas
+State Grid Lasa Gas power station,国家电网拉萨燃机电厂,180,operating,2011,NA,NA,29.6516,90.95942,G405705,0.23652,Tibet,gas
+Three Gorges Energy Group Yingkou Gas Thermal power station,三峡集团营口燃机热电厂,500,shelved,2020,NA,NA,40.612409,122.34242,G405609,0.657,Liaoning,gas
+Three Gorges Energy Group Yingkou Gas Thermal power station,三峡集团营口燃机热电厂,500,shelved,2020,NA,NA,40.612409,122.34242,G405610,0.657,Liaoning,gas
+Tianjin Chentangzhuang Thermal power station,天津陈塘庄热电厂,900,operating,2014,NA,NA,38.96213,117.185749,G405703,1.1826,Tianjin,gas
+Tianjin Chentangzhuang Thermal power station,天津陈塘庄热电厂,900,operating,2016,NA,NA,38.96213,117.185749,G405704,1.1826,Tianjin,gas
+Tianjin Junliangcheng power station,天津军粮城电厂,650,operating,2021,NA,NA,39.05313,117.41226,G405702,0.8541,Tianjin,gas
+Wuhan Donghu Gas Thermal power station,武汉东湖燃机热电厂,185,operating,2015,NA,NA,30.486157,114.421491,G405469,0.24309,Hubei,gas
+Wuhan Donghu Gas Thermal power station,武汉东湖燃机热电厂,185,operating,2017,NA,NA,30.486157,114.421491,G405470,0.24309,Hubei,gas
+Wuxi West Zone Gas Thermal power station,无锡西区燃气热电厂,400,operating,2016,NA,NA,31.634457,120.232722,G405594,0.5256,Jiangsu,gas
+Xiamen Dongbu Gas power station,厦门东部燃气电厂,390,operating,2009,NA,NA,24.54591,118.226434,G405182,0.51246,Fujian,gas
+Xiamen Dongbu Gas power station,厦门东部燃气电厂,390,operating,2010,NA,NA,24.54591,118.226434,G405183,0.51246,Fujian,gas
+Xinjiang Hetian Gas power station,新疆和田天然气电站,50,cancelled,2001,NA,NA,37.095719,79.939213,G405706,0.0657,Xinjiang,gas
+Xinjiang Kelamayi power station,新疆克拉玛依电厂,69,operating,1991,NA,NA,45.69143,85.118875,G405707,0.090666,Xinjiang,gas
+Xinjiang Kelamayi power station,新疆克拉玛依电厂,69,operating,1997,NA,NA,45.69143,85.118875,G405708,0.090666,Xinjiang,gas
+Xinjiang Kelamayi power station,新疆克拉玛依电厂,69,operating,2004,NA,NA,45.69143,85.118875,G405709,0.090666,Xinjiang,gas
+Xinjiang Kelamayi power station,新疆克拉玛依电厂,111.9,operating,2009,NA,NA,45.69143,85.118875,G405710,0.14703660000000002,Xinjiang,gas
+Xiyang Coalbed Methane power station,昔阳煤层气发电站,144,operating,2020,NA,NA,37.598774,113.725553,G405823,0.189216,Shanxi,gas
+Yudean Dinghu Gas power station,粤电鼎湖天然气热电厂,460,construction,2023,NA,NA,23.180543,112.728855,G405379,0.60444,Guangdong,gas
+Yudean Dinghu Gas power station,粤电鼎湖天然气热电厂,460,construction,2023,NA,NA,23.180543,112.728855,G405380,0.60444,Guangdong,gas
+Yudean Huadu Gas Thermal power station,粤电花都天然气热电厂,400,construction,2022,NA,NA,23.362915,113.093,G405375,0.5256,Guangdong,gas
+Yudean Huadu Gas Thermal power station,粤电花都天然气热电厂,400,construction,2022,NA,NA,23.362915,113.093,G405376,0.5256,Guangdong,gas
+Yudean Huangpu power station,粤电黄埔电厂,423,operating,2020,NA,NA,23.078627,113.500547,G405373,0.555822,Guangdong,gas
+Yudean Huangpu power station,粤电黄埔电厂,423,operating,2020,NA,NA,23.078627,113.500547,G405374,0.555822,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,390,operating,2007,NA,NA,22.759327,114.613691,G405355,0.51246,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,390,operating,2007,NA,NA,22.759327,114.613691,G405356,0.51246,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,390,operating,2007,NA,NA,22.759327,114.613691,G405357,0.51246,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,460,operating,2019,NA,NA,22.759327,114.613691,G405358,0.60444,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,460,operating,2019,NA,NA,22.759327,114.613691,G405359,0.60444,Guangdong,gas
+Yudean Huizhou Gas power station,广东惠州天然气发电厂,460,operating,2019,NA,NA,22.759327,114.613691,G405360,0.60444,Guangdong,gas
+Yudean Shenzhen Qianwan Gas power station,粤电深圳前湾燃机电厂,390,operating,2006,NA,NA,22.50785,113.849683,G405367,0.51246,Guangdong,gas
+Yudean Shenzhen Qianwan Gas power station,粤电深圳前湾燃机电厂,390,operating,2007,NA,NA,22.50785,113.849683,G405368,0.51246,Guangdong,gas
+Yudean Shenzhen Qianwan Gas power station,粤电深圳前湾燃机电厂,390,operating,2007,NA,NA,22.50785,113.849683,G405369,0.51246,Guangdong,gas
+Yudean Xinhui Gas power station,粤电新会电厂,390,operating,2018,NA,NA,22.253854,113.066065,G405365,0.51246,Guangdong,gas
+Yudean Xinhui Gas power station,粤电新会电厂,390,operating,2018,NA,NA,22.253854,113.066065,G405366,0.51246,Guangdong,gas
+Yudean Zhongshan Sanjiao Gas Thermal power station,粤电中山三角燃机发电厂,460,operating,2018,NA,NA,22.712865,113.440746,G405352,0.60444,Guangdong,gas
+Yudean Zhongshan Sanjiao Gas Thermal power station,粤电中山三角燃机发电厂,460,operating,2019,NA,NA,22.712865,113.440746,G405353,0.60444,Guangdong,gas
+Yudean Zhongshan Sanjiao Gas Thermal power station,粤电中山三角燃机发电厂,460,operating,2019,NA,NA,22.712865,113.440746,G405354,0.60444,Guangdong,gas
+Zheneng Changshan Gas power station,浙能常山天然气热电厂,458,operating,2014,NA,NA,28.925712,118.462985,G405745,0.601812,Zhejiang,gas
+Zheneng Changxing Natural Gas power station,浙能长兴天然气热电厂,435,operating,2013,NA,NA,30.979487,119.92028,G405754,0.57159,Zhejiang,gas
+Zheneng Changxing Natural Gas power station,浙能长兴天然气热电厂,435,operating,2013,NA,NA,30.979487,119.92028,G405755,0.57159,Zhejiang,gas
+Zheneng Jinhua Gas power station,浙能金华燃机热电厂,186,operating,2005,NA,NA,29.069833,119.580378,G405768,0.244404,Zhejiang,gas
+Zheneng Ningbo Zhenhai Power Center Natural Gas Thermal power station,浙能宁波镇海动力中心天然气热电厂,350,operating,2014,NA,NA,30.022471,121.661074,G405752,0.4599,Zhejiang,gas
+Zheneng Ningbo Zhenhai Power Center Natural Gas Thermal power station,浙能宁波镇海动力中心天然气热电厂,350,operating,2014,NA,NA,30.022471,121.661074,G405753,0.4599,Zhejiang,gas
+Zheneng Wenzhou Longwan power station,浙能温州龙湾燃机发电厂,342,operating,1999,NA,NA,27.968583,120.807422,G405767,0.449388,Zhejiang,gas
+Zheneng Xiaoshan power station,浙能萧山发电厂,400,operating,2008,NA,NA,30.050228,120.232117,G405746,0.5256,Zhejiang,gas
+Zheneng Xiaoshan power station,浙能萧山发电厂,400,operating,2008,NA,NA,30.050228,120.232117,G405747,0.5256,Zhejiang,gas
+Zheneng Xiaoshan power station,浙能萧山发电厂,420,operating,2012,NA,NA,30.050228,120.232117,G405748,0.55188,Zhejiang,gas
+Zheneng Zhenhai Natural Gas power station,浙能镇海天然气发电厂,395,operating,2007,NA,NA,29.946169,121.688796,G405749,0.51903,Zhejiang,gas
+Zheneng Zhenhai Natural Gas power station,浙能镇海天然气发电厂,395,operating,2007,NA,NA,29.946169,121.688796,G405750,0.51903,Zhejiang,gas
+Zheneng Zhenhai United power station,浙能镇海联合发电厂,344,operating,1999,NA,NA,29.943895,121.684007,G405751,0.452016,Zhejiang,gas
+Zhongshan Nanlang Gas power station,中山南朗燃气电厂,180,operating,2005,NA,NA,22.55203,113.5694,G405329,0.23652,Guangdong,gas
+Zhongshan Nanlang Gas power station,中山南朗燃气电厂,180,operating,2005,NA,NA,22.55203,113.5694,G405330,0.23652,Guangdong,gas
+Zhongshan Yong'an Gas Thermal power station,中山永安热电厂,180,operating,2005,NA,NA,22.665361,113.195853,G405205,0.23652,Guangdong,gas
+Zhongshan Yong'an Gas Thermal power station,中山永安热电厂,220,proposed,2022,NA,NA,22.665361,113.195853,G405206,0.28908,Guangdong,gas

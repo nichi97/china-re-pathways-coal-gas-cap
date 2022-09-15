@@ -1,4 +1,6 @@
 library(tidyverse)
+library(sf)
+library(tmap)
 
 coal <- read_csv("./data/processed_data/china_coal.csv")
 emis_proj <- read_csv("./data/processed_data/power_sector_emission_2.csv")
@@ -16,7 +18,10 @@ function(plant_df, emis_proj, retrofit_years, negative_emission,
   #' @param gas_lifetime: the default lifetime of a gas fired power plant
   #' @param construction_time: default time spends on constructing a coal fired power plant
   #' @param capture_rate: The capture rate for CCS technology
-  #' @return a data frame that contains year and cumulative emission 
+  #' @return a list that contains two objects. First, `emis` is the emission trajectory 
+  #' under the current scheme of retrofitting. Second, `retrofit` is a dataframe containing
+  #' information of the plants and the years at which these plants are retrofitted as determined
+  #' by the algorithm.
   
   df_coal_retire_trend <- 
     plant_df %>% filter(Status == "retired")
@@ -163,7 +168,6 @@ function(plant_df, emis_proj, retrofit_years, negative_emission,
     year_ls[[curr_final_end_year]] <- year_ls[[curr_final_end_year]] - curr_emis
   }
   
-  
   # retrofitting 
   retrofit_candidate <- 
     plant_vintage %>% filter(!is.na(Year)) %>% 
@@ -186,6 +190,10 @@ function(plant_df, emis_proj, retrofit_years, negative_emission,
   # for those that does not have a start year or end year, filter it out.
   plant_vintage <- 
     plant_vintage %>% filter(!is.na(final_start_year) & !is.na(final_end_year))
+  
+  # record which plants was retrofitted, in which year
+  # initialize and then add row to it later on
+  retrofit_record <- tibble()
   
   for(loop_year in retrofit_years){
     
@@ -222,6 +230,12 @@ function(plant_df, emis_proj, retrofit_years, negative_emission,
       loop_year_ch <- loop_year %>% as.character()
       curr_final_year_ch <- curr_final_year %>% as.character()
       
+      # add to retrofit_record, adding the year in which the 
+      # plant is retrofitted
+      curr_cand_w_year <- 
+        curr_cand %>% mutate(retrofit_year = loop_year)
+      retrofit_record <- 
+        retrofit_record %>% bind_rows(curr_cand_w_year)
       # take away from year_ls
       year_ls[[loop_year_ch]] <- year_ls[[loop_year_ch]] - curr_emis_reduct
       year_ls[[curr_final_year_ch]] <- year_ls[[curr_final_year_ch]] + curr_emis_reduct 
@@ -244,7 +258,11 @@ function(plant_df, emis_proj, retrofit_years, negative_emission,
     mutate(year = (min(plant_vintage$Year, na.rm=T)):2080) %>% 
     rename(cum_emis = value) 
   
-  return(post_cum_emis_df)
+  rst <- list()
+  rst$emis <- post_cum_emis_df
+  rst$retrofit <- retrofit_record
+  
+  return(rst)
 }
 
 emis_proj <- read_csv("./data/processed_data/power_sector_emission_2.csv")
@@ -255,11 +273,17 @@ retrofitted_rst <- calc_coal_cum_emis_retrofitted(coal_gas_merge, emis_proj,
                                                   seq(2025, 2060, 5),
                                                   negative_emis)
 
+emis_under_retrofit <- retrofitted_rst$emis 
+
+retrofit_schedule <- retrofitted_rst$retrofit 
+write_csv(retrofit_schedule, "./data/processed_data/retrofit_schedule.csv")
+
+
 
 # ------------------ Compare coal emis with emis proj --------
 
 ggplot(emis_proj, aes(x = Year, y = CO2_emission)) + 
-  geom_area(data=retrofitted_rst, aes(y = cum_emis, x = year)) + 
+  geom_area(data=emis_under_retrofit, aes(y = cum_emis, x = year)) + 
   geom_point(col="red") + 
   geom_line(col="red") + 
   xlim(2020, 2060) + 
@@ -267,14 +291,82 @@ ggplot(emis_proj, aes(x = Year, y = CO2_emission)) +
                      limits = c(-1000, 5000)) +
   labs(y = "CO2 emission (million ton)", 
        caption = "The red line is the projected CO2 emission for the entire electricity sector under the 2C scenario developed by 
-       ICCSD (清华大学气候变化与可持续发展研究院). The shaded area is the emission from coal-fired
-       power plants under natural phaseout. 40 years of lifetime is assumed.") + 
-  ggtitle("Coal emission trajectory with retrofitting and BECCS") + 
+       ICCSD (清华大学气候变化与可持续发展研究院). The shaded area represents the emission from coal-fired
+       power plants and gas fired power plants under retrofitting. 40 years of lifetime is assumed.") + 
+  ggtitle("Coal & Gas emission trajectory with retrofitting and BECCS") + 
   theme(plot.caption = element_text(hjust=0))
  
-ggsave("./figures/coal_phaseout_retrofit_beccs.png", units="cm", width=20)
+ggsave("./figures/coal_phaseout_retrofit_beccs_gas.png", units="cm", width=20,
+       height=10)
 
 
+# ----------------------- Retrofitted Gas and Coal plants viz -----------
 
+china_shp <- st_read("./data/spatial_data/gadm40_CHN_1.shp")
+retrofit_plants_rst <- retrofitted_rst$retrofit
 
+retrofit_sf <- 
+  st_as_sf(retrofit_plants_rst, coords = c("Longitude", "Latitude"))
 
+retrofit_sf <- 
+  retrofit_sf %>% mutate(retrofit_year_ch = as.character(retrofit_year))
+
+st_crs(retrofit_sf) <- 4326
+
+retrofit_map <- 
+  tm_shape(china_shp) + 
+  tm_borders(alpha = 0.4) + 
+  tm_shape(retrofit_sf) + 
+  tm_dots(col="retrofit_year_ch", shape = "resource", size=0.1) +
+  tm_layout(title="Retrofitting Decisions by Year and Resources")
+  
+tmap_save(retrofit_map, "./figures/coal_gas_retrofit_time.png", 
+          units = "cm", height = 17, width = 20)
+
+# ------------------------ Coal and Gas CCS capacity ----------------------------
+calc_retrofit_cap <- function(retrofit_plants, eff_factor = 0.95){
+  list_name = (retrofit_plants$retrofit_year%>% min(na.rm=T)):2080 %>% as.character()
+  year_ls <- vector("list", length = length(list_name))
+  names(year_ls) <- list_name
+  for (i in seq_along(year_ls)){
+    year_ls[[i]] <- 0
+  }
+  
+  for(i in 1:nrow(retrofit_plants)){
+    curr_row = retrofit_plants %>% slice(i)
+    curr_retire_yr <- curr_row$final_end_year %>% as.character()
+    curr_start_yr <- curr_row$retrofit_year %>% as.character()
+    # by default, assume 5% power loss due to CCS.
+    curr_cap <- curr_row$`Capacity (MW)` * eff_factor
+    
+    year_ls[[curr_start_yr]] <- year_ls[[curr_start_yr]] + curr_cap
+    year_ls[[curr_retire_yr]] <- year_ls[[curr_retire_yr]] - curr_cap
+  }
+  
+  post_cum_emis_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
+    mutate(year = (min(retrofit_plants$retrofit_year, na.rm=T)):2080) %>% 
+    rename(cum_emis = value) 
+  
+}
+  
+retrofit_coal <- retrofit_plants %>% filter(resource == "coal")
+retrofit_gas<- retrofit_plants %>% filter(resource == "gas")
+
+coal_ccs_rst <- calc_retrofit_cap(retrofit_coal)
+gas_ccs_rst <- calc_retrofit_cap(retrofit_gas) 
+
+gas_cap_vct <- 
+gas_ccs_rst %>% filter(year %in% c(2020, 2030, 2040, 2050, 2060)) %>% 
+  pull(cum_emis) / 1000
+
+gas_cap_vct <- c(0, gas_cap_vct)
+
+df <- 
+  coal_ccs_rst %>% filter(year %in% c(2020, 2030, 2040, 2050, 2060)) %>% 
+  mutate(cum_emis = cum_emis / 1000) %>% 
+  mutate(gas_ccs = gas_cap_vct) %>% 
+  rename(coal_ccs = cum_emis)
+
+write_csv(df, "./data/processed_data/coal_gas_ccs_cap.csv")
+
+  

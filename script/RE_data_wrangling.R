@@ -76,6 +76,7 @@ gas <-
   gas %>% mutate(`Annual CO2 (million tonnes / annum)` = 
                    `Capacity elec. (MW)` * 365 * 24 * 0.3 * 0.5 / 1e6)
 
+# make sure gas and coal has the same column names
 gas_merge <- 
   gas %>% 
   rename(Plant = `Plant name`, 
@@ -87,9 +88,10 @@ gas_merge <-
          `Tracker ID` = `GEM unit ID`) %>% 
   select(Plant, `Chinese Name`, `Capacity (MW)`, `Status`, Year, `RETIRED`,
          `Planned Retire`, Latitude, Longitude, `Tracker ID`, 
-         `Annual CO2 (million tonnes / annum)`) %>% 
+         `Annual CO2 (million tonnes / annum)`, `Subnational unit (province, state)`) %>% 
   mutate(resource = "gas")
 
+write_csv(gas_merge, "./data/processed_data/gas_merge_ready.csv")
 
 
 # clean gas
@@ -100,7 +102,9 @@ coal_merge <-
 
 coal_gas_merge <- bind_rows(coal_merge, gas_merge)
 coal_gas_merge <- 
-  coal_gas_merge %>% filter(!is.na(Year))
+  coal_gas_merge %>% filter(!is.na(Year)) %>% 
+  filter(!is.na(`Annual CO2 (million tonnes / annum)`))
+  
 
 write_csv(coal_gas_merge, "./data/processed_data/coal_gas_merge_final.csv")
   

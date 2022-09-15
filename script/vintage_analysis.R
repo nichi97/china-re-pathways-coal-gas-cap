@@ -71,9 +71,52 @@ df_coal_planned_retire_trend %>%
 ggplot(aes(x = `lifespan`)) + 
  geom_histogram(bins=20)
 
+# ---------------------------- Gas ----------------------------------------
+gas <- read_csv("./data/processed_data/gas_merge_ready.csv")
+gas_vintage <- gas %>% 
+    filter(!Status %in% c("cancelled", "shelved",  "pre-permit", "mothballed", "announced")) %>% 
+    filter(!(Status == "operating" & is.na(Year) & is.na(`Planned Retire`)))
+list_name = (coal_vintage$Year %>% min(na.rm=T)):2080 %>% as.character()
+year_ls <- vector("list", length = length(list_name))
+names(year_ls) <- list_name
+for (i in seq_along(year_ls)){
+  year_ls[[i]] <- 0
+}
+
+ for(i in 1:nrow(coal_vintage)){
+    curr_row = gas_vintage %>% slice(i)
+    curr_status <- curr_row$Status
+    curr_retire_yr <- curr_row$RETIRED
+    curr_start_yr <- curr_row$Year
+    curr_plan_retire_yr <- curr_row$`Planned Retire`
+    curr_cap <- curr_row$`Capacity (MW)`
+    curr_resource <- curr_row$resource
+    
+    if (!is.na(curr_cap) & !is.na(curr_start_yr)){
+      curr_retire_yr <- curr_start_yr + 40
+      year_ls[[as.character(curr_start_yr)]] <- year_ls[[as.character(curr_start_yr)]] + curr_cap
+      year_ls[[as.character(curr_retire_yr)]] <- year_ls[[as.character(curr_retire_yr)]] - curr_cap
+    }
+ }
+
+cum_cap_df <- year_ls %>% cumsum() %>% as.tibble() %>% 
+  mutate(year = (min(gas_vintage$Year, na.rm=T)):2080) %>% 
+  rename(cumCap = value) %>% 
+  mutate(cumCap = cumCap / 1000)
+
+focused_gas_df <- 
+  cum_cap_df %>% filter(year %in% c(2020, 2030, 2040, 2050, 2060))
+    
+focused_gas_df
+
+write_csv(focused_gas_df, "./data/processed_data/gas_cap.csv")
+
+# change this to set default planned lifetime and construction for coal plants
+this_year <- Sys.Date() %>% str_sub(1,4) %>% as.numeric()
+trouble_maker <- vector("numeric", 0)
+
 
 # ------------------------- Coal ----------------------------------------------------
-
 calc_coal_cum_cap <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
   
   #' @param PLANNED_LIFETIME: default lifetime of a coal fired power plant
@@ -112,10 +155,16 @@ calc_coal_cum_cap <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
     curr_start_yr <- curr_row$Year
     curr_plan_retire_yr <- curr_row$`Planned Retire`
     curr_cap <- curr_row$`Capacity (MW)`
+    curr_resource <- curr_row$resource
     
+    if (curr_resource == "gas" & !is.na(curr_cap) & !is.na(curr_start_yr)){
+      curr_retire_yr <- curr_start_yr + 40
+      year_ls[[as.character(curr_start_yr)]] <- year_ls[[as.character(curr_start_yr)]] + curr_cap
+      year_ls[[as.character(curr_retire_yr)]] <- year_ls[[as.character(curr_retire_yr)]] - curr_cap
+      
     # 1. Retired, with start and retirement year
     # add cap at start year and subtract at retire year
-    if (curr_status == "retired" & !is.na(curr_start_yr) & !is.na(curr_retire_yr)){
+    }else if (curr_status == "retired" & !is.na(curr_start_yr) & !is.na(curr_retire_yr)){
       year_ls[[as.character(curr_start_yr)]] <- year_ls[[as.character(curr_start_yr)]] + curr_cap
       year_ls[[as.character(curr_retire_yr)]] <- year_ls[[as.character(curr_retire_yr)]] - curr_cap
       
@@ -211,37 +260,11 @@ calc_coal_cum_cap <- function(PLANNED_LIFETIME, CONSTRUCTION_TIME){
   
 }
 
-shorter_lifetime_df <- calc_coal_cum_cap(20, 5)
-# MW -> GW
-shorter_lifetime_df <- 
-  shorter_lifetime_df %>% mutate(cumCap = cumCap / 1000)
-
-short_plot <- ggplot(shorter_lifetime_df, aes(y = cumCap, x = year)) + 
-  geom_line() + 
-  geom_area() + 
-  xlim(2000, 2080) + 
-  labs(y = "Cumulative Capacity (GW)", 
-       title = "Cumulative Coal Capacity, 20 years planned lifetime") + 
-  scale_y_continuous(breaks=seq(0,1200, 200))  + 
-  theme(text=element_text(size=20))
-
-# construct a data frame of cumulative capacity
-change_df <- calc_coal_cum_cap(30, 5)
-# convert cumCap to GW
-change_df <- 
-  change_df %>% mutate(cumCap = cumCap / 1000)
-mid_plot <- ggplot(change_df, aes(y = cumCap, x = year)) + 
-  geom_line() + 
-  geom_area() + 
-  xlim(2000, 2080) + 
-  labs(y = "Cumulative Capacity (GW)", 
-       title = "Cumulative Coal Capacity, 30 years planned lifetime") + 
-  scale_y_continuous(breaks=seq(0,1200, 200))  + 
-  theme(text=element_text(size=20))
-  
+ 
 longer_lifetime_df <- calc_coal_cum_cap(40, 5)
 longer_lifetime_df <- 
   longer_lifetime_df %>% mutate(cumCap = cumCap / 1000)
+
 long_plot <- ggplot(longer_lifetime_df, aes(y = cumCap, x = year)) + 
   geom_line() + 
   geom_area() + 
@@ -251,6 +274,12 @@ long_plot <- ggplot(longer_lifetime_df, aes(y = cumCap, x = year)) +
   scale_y_continuous(breaks=seq(0,1200, 200)) + 
   theme(text=element_text(size=20))
 
+long_plot
+
+focused_coal_df <- 
+  longer_lifetime_df %>% filter(year %in% c(2020, 2030, 2040, 2050, 2060))
+
+write_csv(focused_coal_df, "./data/processed_data/coal_capacity.csv")
 
 coal_vintage_plot <- ggarrange(short_plot, mid_plot, long_plot, 
           ncol=1, nrow=3)
