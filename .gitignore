@@ -1,8 +1,8 @@
 # R profile files
-.Rproj.user
-.Rhistory
-.Ruserdata
-.Rproj
+*.Rproj.user
+*.Rhistory
+*.Ruserdata
+*.Rproj
 
 # For rmd generate html files 
 *.html
