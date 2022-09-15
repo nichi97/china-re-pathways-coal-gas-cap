@@ -3,11 +3,12 @@
 *.Rhistory
 *.Ruserdata
 *.Rproj
+.RData
 
 # For rmd generate html files 
 *.html
 
 # For RHub hosting files 
-rsconnect/
+./rsconnect/
 
 
