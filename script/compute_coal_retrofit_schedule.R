@@ -270,7 +270,7 @@ negative_emis <- read_csv("./data/processed_data/negative_emission.csv")
 coal_gas_merge <- read_csv("./data/processed_data/coal_gas_merge_final.csv")
 
 retrofitted_rst <- calc_coal_cum_emis_retrofitted(coal_gas_merge, emis_proj,
-                                                  seq(2025, 2060, 5),
+                                                  seq(2040, 2060, 5),
                                                   negative_emis)
 
 emis_under_retrofit <- retrofitted_rst$emis 
