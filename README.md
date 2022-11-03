@@ -1,3 +1,7 @@
+# Running the code 
+
+Retrofit schedule code is contained in `script/compute_coal_retrofit_schedule.r` 
+
 # Coal and gas brownfield generation capacity automation
 
 This project is part of the 
